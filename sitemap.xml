@@ -221,6 +221,13 @@
   </url>
   
   <url>
+    <loc>https://d-sketon.top/tags/%E9%9F%B3MAD/</loc>
+    <lastmod>2021-10-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://d-sketon.top/tags/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2021-10-11</lastmod>
     <changefreq>daily</changefreq>
@@ -229,13 +236,6 @@
   
   <url>
     <loc>https://d-sketon.top/tags/vue/</loc>
-    <lastmod>2021-10-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://d-sketon.top/tags/%E9%9F%B3MAD/</loc>
     <lastmod>2021-10-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -258,13 +258,6 @@
   </url>
   
   <url>
-    <loc>https://d-sketon.top/categories/%E5%89%8D%E7%AB%AF/</loc>
-    <lastmod>2021-10-11</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://d-sketon.top/categories/%E9%9F%B3MAD/</loc>
     <lastmod>2021-10-11</lastmod>
     <changefreq>daily</changefreq>
@@ -273,6 +266,13 @@
   
   <url>
     <loc>https://d-sketon.top/categories/Java/Java%E9%AB%98%E9%98%B6/</loc>
+    <lastmod>2021-10-11</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://d-sketon.top/categories/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2021-10-11</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
