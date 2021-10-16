@@ -25,4 +25,4 @@ https://d-sketon.top/20210922/java-multithread2/
 https://d-sketon.top/20210922/java-multithread/
 https://d-sketon.top/20210922/java-advanced-file-processing/
 https://d-sketon.top/20210921/java-advanced-file-processing2/
-https://d-sketon.top/20210921/null/
+https://d-sketon.top/20210921/java-advanced-text-processing/

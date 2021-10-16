@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://d-sketon.top/20210921/java-advanced-text-processing/</loc>
+    
+    <lastmod>2021-10-16</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://d-sketon.top/friends/</loc>
     
     <lastmod>2021-10-16</lastmod>
@@ -211,13 +218,6 @@
     
   </url>
   
-  <url>
-    <loc>https://d-sketon.top/20210921/null/</loc>
-    
-    <lastmod>2021-10-16</lastmod>
-    
-  </url>
-  
 
   <url>
     <loc>https://d-sketon.top/</loc>
@@ -249,14 +249,14 @@
   </url>
   
   <url>
-    <loc>https://d-sketon.top/tags/vue/</loc>
+    <loc>https://d-sketon.top/tags/jQuery/</loc>
     <lastmod>2021-10-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://d-sketon.top/tags/jQuery/</loc>
+    <loc>https://d-sketon.top/tags/vue/</loc>
     <lastmod>2021-10-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -286,14 +286,14 @@
   </url>
   
   <url>
-    <loc>https://d-sketon.top/categories/%E5%89%8D%E7%AB%AF/</loc>
+    <loc>https://d-sketon.top/categories/Java/Java%E9%AB%98%E9%98%B6/</loc>
     <lastmod>2021-10-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://d-sketon.top/categories/Java/Java%E9%AB%98%E9%98%B6/</loc>
+    <loc>https://d-sketon.top/categories/%E5%89%8D%E7%AB%AF/</loc>
     <lastmod>2021-10-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -307,14 +307,14 @@
   </url>
   
   <url>
-    <loc>https://d-sketon.top/categories/%E5%89%8D%E7%AB%AF/vue/</loc>
+    <loc>https://d-sketon.top/categories/%E5%89%8D%E7%AB%AF/jQuery/</loc>
     <lastmod>2021-10-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://d-sketon.top/categories/%E5%89%8D%E7%AB%AF/jQuery/</loc>
+    <loc>https://d-sketon.top/categories/%E5%89%8D%E7%AB%AF/vue/</loc>
     <lastmod>2021-10-16</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
