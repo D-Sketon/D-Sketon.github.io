@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://d-sketon.top/20220603/leancloud-recovery/</loc>
+    
+    <lastmod>2022-06-03</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://d-sketon.top/20210925/otomad-tutorial/</loc>
     
     <lastmod>2022-06-03</lastmod>
@@ -58,14 +65,14 @@
   </url>
   
   <url>
-    <loc>https://d-sketon.top/20210925/otomad-midi/</loc>
+    <loc>https://d-sketon.top/20210922/java-lambda/</loc>
     
     <lastmod>2021-10-20</lastmod>
     
   </url>
   
   <url>
-    <loc>https://d-sketon.top/20210922/java-lambda/</loc>
+    <loc>https://d-sketon.top/20210925/otomad-midi/</loc>
     
     <lastmod>2021-10-20</lastmod>
     
@@ -135,14 +142,14 @@
   </url>
   
   <url>
-    <loc>https://d-sketon.top/20210922/java-reflection/</loc>
+    <loc>https://d-sketon.top/20210922/java-multithread/</loc>
     
     <lastmod>2021-10-20</lastmod>
     
   </url>
   
   <url>
-    <loc>https://d-sketon.top/20210922/java-multithread/</loc>
+    <loc>https://d-sketon.top/20210922/java-reflection/</loc>
     
     <lastmod>2021-10-20</lastmod>
     
@@ -170,6 +177,13 @@
   </url>
   
   <url>
+    <loc>https://d-sketon.top/20210922/java-modularization/</loc>
+    
+    <lastmod>2021-10-20</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://d-sketon.top/20210922/java-sql-programming/</loc>
     
     <lastmod>2021-10-20</lastmod>
@@ -184,7 +198,7 @@
   </url>
   
   <url>
-    <loc>https://d-sketon.top/20210922/java-modularization/</loc>
+    <loc>https://d-sketon.top/20210922/java-annotation/</loc>
     
     <lastmod>2021-10-20</lastmod>
     
@@ -198,7 +212,7 @@
   </url>
   
   <url>
-    <loc>https://d-sketon.top/20210922/java-annotation/</loc>
+    <loc>https://d-sketon.top/20210922/java-network-programming/</loc>
     
     <lastmod>2021-10-20</lastmod>
     
@@ -213,13 +227,6 @@
   
   <url>
     <loc>https://d-sketon.top/20210925/java-network-programming-homework/</loc>
-    
-    <lastmod>2021-10-20</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://d-sketon.top/20210922/java-network-programming/</loc>
     
     <lastmod>2021-10-20</lastmod>
     
@@ -284,6 +291,13 @@
   </url>
   
   <url>
+    <loc>https://d-sketon.top/tags/leancloud/</loc>
+    <lastmod>2022-06-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://d-sketon.top/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</loc>
     <lastmod>2022-06-03</lastmod>
     <changefreq>daily</changefreq>
@@ -328,7 +342,7 @@
   </url>
   
   <url>
-    <loc>https://d-sketon.top/categories/%E5%89%8D%E7%AB%AF/vue/</loc>
+    <loc>https://d-sketon.top/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/</loc>
     <lastmod>2022-06-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -342,14 +356,14 @@
   </url>
   
   <url>
-    <loc>https://d-sketon.top/categories/%E5%89%8D%E7%AB%AF/jQuery/</loc>
+    <loc>https://d-sketon.top/categories/%E5%89%8D%E7%AB%AF/vue/</loc>
     <lastmod>2022-06-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://d-sketon.top/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/</loc>
+    <loc>https://d-sketon.top/categories/%E5%89%8D%E7%AB%AF/jQuery/</loc>
     <lastmod>2022-06-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
