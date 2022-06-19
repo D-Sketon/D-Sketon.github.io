@@ -1,6 +1,7 @@
 https://d-sketon.top/20220619/csapp-bomblab/
 https://d-sketon.top/20220619/csapp-malloclab/
 https://d-sketon.top/20220619/csapp-attacklab/
+https://d-sketon.top/20220601/leancloud-recovery/
 https://d-sketon.top/20211224/baidumap-api/
 https://d-sketon.top/20211024/physical-layer/
 https://d-sketon.top/20211023/data-link-layer/

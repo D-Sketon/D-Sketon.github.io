@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://d-sketon.top/20220601/leancloud-recovery/</loc>
+    
+    <lastmod>2022-06-19</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://d-sketon.top/20220619/csapp-bomblab/</loc>
     
     <lastmod>2022-06-19</lastmod>
@@ -320,6 +327,13 @@
   
   <url>
     <loc>https://d-sketon.top/tags/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/</loc>
+    <lastmod>2022-06-19</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://d-sketon.top/tags/leancloud/</loc>
     <lastmod>2022-06-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
