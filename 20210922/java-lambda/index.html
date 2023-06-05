@@ -1,0 +1,666 @@
+
+    <!DOCTYPE html>
+    <html lang="zh-CN"
+            
+    >
+    <head><!-- hexo injector head_begin start -->
+<link rel="stylesheet" href="/css/bilicard.css">
+
+<link rel="stylesheet" href="/source/midijs.css">
+
+<script src="https://www.midijs.net/lib/midi.js"></script>
+<!-- hexo injector head_begin end -->
+    <meta charset="utf-8">
+    
+    
+    <title>
+        Java Lambda表达式 |
+        
+        拔剑Sketon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="MOOC个人学习笔记JavaLambda表达式，包含Lambda表达式基础，函数式接口，方法引用和Lambda表达式应用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java Lambda表达式">
+<meta property="og:url" content="https://d-sketon.github.io/20210922/java-lambda/index.html">
+<meta property="og:site_name" content="拔剑Sketon">
+<meta property="og:description" content="MOOC个人学习笔记JavaLambda表达式，包含Lambda表达式基础，函数式接口，方法引用和Lambda表达式应用">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-09-22T14:23:56.000Z">
+<meta property="article:modified_time" content="2023-01-17T04:43:27.544Z">
+<meta property="article:author" content="D-Sketon">
+<meta property="article:tag" content="Java">
+<meta name="twitter:card" content="summary">
+    
+        <link rel="alternate" href="/atom.xml" title="拔剑Sketon" type="application/atom+xml">
+    
+    
+        <link rel="shortcut icon" href="/css/images/favicon.ico">
+    
+    
+        
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@latest/index.min.css">
+
+    
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        
+<link rel="stylesheet" href="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="https://unpkg.com/katex@0.16.7/dist/katex.min.css">
+
+    
+    
+<script src="https://unpkg.com/pace-js@1.2.4/pace.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+  
+    <body>
+    <div id="container">
+        <div id="wrap">
+            <header id="header">
+    
+        <img data-src="/css/images/banner.jpg" data-sizes="auto" alt="Java Lambda表达式" class="lazyload">
+    
+    <div id="header-outer" class="outer">
+        <div id="header-title" class="inner">
+            <h1 id="logo-wrap">
+                
+                    
+                    
+                        <a href="/" id="logo">Java Lambda表达式</a>
+                    
+                
+            </h1>
+            
+                
+                
+            
+        </div>
+        <div id="header-inner">
+            <nav id="main-nav">
+                <a id="main-nav-toggle" class="nav-icon"></a>
+                
+                    <span class="main-nav-link-wrap">
+                        <span class="main-nav-icon"></span>
+                        <a class="main-nav-link" href="/">首页</a>
+                    </span>
+                
+                    <span class="main-nav-link-wrap">
+                        <span class="main-nav-icon"></span>
+                        <a class="main-nav-link" href="/archives">归档</a>
+                    </span>
+                
+                    <span class="main-nav-link-wrap">
+                        <span class="main-nav-icon"></span>
+                        <a class="main-nav-link" href="/about">关于</a>
+                    </span>
+                
+                    <span class="main-nav-link-wrap">
+                        <span class="main-nav-icon"></span>
+                        <a class="main-nav-link" href="/friend">友链</a>
+                    </span>
+                
+            </nav>
+            <nav id="sub-nav">
+                
+                    <a id="nav-rss-link" class="nav-icon" href="/atom.xml"
+                       title="RSS 订阅"></a>
+                
+                
+                    <a id="nav-search-btn" class="nav-icon popup-trigger" title="搜索">
+                    </a>
+                
+            </nav>
+            <div id="search-form-wrap">
+                <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="搜索"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://d-sketon.github.io"></form>
+            </div>
+        </div>
+    </div>
+</header>
+  
+            <div id="content" class="outer">
+                <section id="main"><article id="post-Lambda表达式" class="h-entry article article-type-post"
+         itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <div class="article-inner">
+        <div class="article-meta">
+            <div class="article-date">
+    <a href="/20210922/java-lambda/" class="article-date-link">
+        <time datetime="2021-09-22T14:23:56.000Z"
+              itemprop="datePublished">2021-09-22</time>
+    </a>
+</div>
+
+            
+    <div class="article-category">
+        <a class="article-category-link" href="/categories/Java/">Java</a><a class="article-category-link" href="/categories/Java/Java%E9%AB%98%E9%98%B6/">Java高阶</a>
+    </div>
+
+        </div>
+        <div class="hr-line"></div>
+        
+        <div class="e-content article-entry" itemprop="articleBody">
+            
+                <h2 id="1lambda表达式基础"><a class="markdownIt-Anchor" href="#1lambda表达式基础"></a> <strong>1.Lambda表达式基础</strong></h2>
+<ul>
+<li>
+<p>类似于匿名方法，一个没有名字的方法</p>
+</li>
+<li>
+<p>参数，箭头，表达式语句</p>
+</li>
+<li>
+<p>可以忽略写参数类型</p>
+</li>
+<li>
+<p><strong>坚决不声明返回值类型</strong></p>
+</li>
+<li>
+<p>没有public/protected/private/static/final等修饰符</p>
+</li>
+<li>
+<p>单句表达式，将直接返回值，不用大括号</p>
+</li>
+<li>
+<p>带return语句， 算多句，必须用大括号</p>
+</li>
+<li>
+<p>无参数，<strong>仅保留括号</strong>，箭头，表达式</p>
+</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> <span class="title class_">Thread</span>(</span><br><span class="line">            ()-&gt;</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="type">int</span> sum=<span class="number">0</span>;</span><br><span class="line">                    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=<span class="number">100</span>;i++)</span><br><span class="line">                    &#123;</span><br><span class="line">                        sum = sum + i;</span><br><span class="line">                    &#125;</span><br><span class="line">                    System.out.println(<span class="string">&quot;总和:&quot;</span> + sum);</span><br><span class="line">                &#125;</span><br><span class="line">            ).start();</span><br></pre></td></tr></table></figure>
+<ul>
+<li>一个参数，<strong>可省略括号</strong>，箭头，表达式</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Adder</span>  <span class="variable">c1</span> <span class="operator">=</span> </span><br><span class="line">                x -&gt; </span><br><span class="line">                &#123;</span><br><span class="line">                    x++;</span><br><span class="line">                &#125;;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>如果有返回值，返回值类型会在上下文推断出来的，无需声明</strong></li>
+<li>只在某几个分支有返回值，这样是不合法的</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">Adder</span>  <span class="variable">c2</span> <span class="operator">=</span></span><br><span class="line">                x -&gt;</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">if</span>(x&gt;<span class="number">0</span>)</span><br><span class="line">                        <span class="keyword">return</span> x+<span class="number">1</span>;<span class="comment">//wrong</span></span><br><span class="line">                &#125;;</span><br></pre></td></tr></table></figure>
+<h2 id="2函数式接口"><a class="markdownIt-Anchor" href="#2函数式接口"></a> <strong>2.函数式接口</strong></h2>
+<ul>
+<li><strong>是一个接口，符合Java接口的定义</strong></li>
+<li><strong>只包含一个抽象方法的接口</strong></li>
+<li>可以包括其他的default方法、static方法、private方法</li>
+<li>由于只有一个未实现的方法，所以Lambda表达式可以自动填上这个尚未实现的方法</li>
+<li>采用Lambda表达式，可以自动创建出一个(<strong>伪</strong>)嵌套类的对象(<strong>没有实际的嵌套类class文件产生</strong>)，然后使用，比真正嵌套类<strong>更加轻量</strong>，更加简洁高效</li>
+</ul>
+<h3 id="系统自带的函数式接口"><a class="markdownIt-Anchor" href="#系统自带的函数式接口"></a> <strong>系统自带的函数式接口</strong></h3>
+<ul>
+<li>涵盖大部分常用的功能，可以重复使用</li>
+<li>位于java.util.function包中</li>
+</ul>
+<h4 id="predicatet-接收一个参数返回一个布尔值"><a class="markdownIt-Anchor" href="#predicatet-接收一个参数返回一个布尔值"></a> <strong>Predicate&lt;T&gt;: 接收一个参数，返回一个布尔值</strong></h4>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Predicate&lt;String&gt; oddLength = s -&gt; </span><br><span class="line">    s.length()%<span class="number">2</span> == <span class="number">0</span> ? <span class="literal">false</span>:<span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(String p : planets)    &#123;</span><br><span class="line">    <span class="keyword">if</span>(oddLength.test(p)) &#123;</span><br><span class="line">        System.out.println(p);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="consumert接收一个参数做操作无返回"><a class="markdownIt-Anchor" href="#consumert接收一个参数做操作无返回"></a> <strong>Consumer&lt;T&gt;：接收一个参数，做操作，无返回</strong></h4>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Consumer&lt;String&gt; printer = s -&gt; </span><br><span class="line">    System.out.println(<span class="string">&quot;Planet :&quot;</span> + s);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(String p : planets)    &#123;</span><br><span class="line">    printer.accept(p);</span><br><span class="line">&#125;            </span><br></pre></td></tr></table></figure>
+<h4 id="suppliert无输入参数返回一个数据"><a class="markdownIt-Anchor" href="#suppliert无输入参数返回一个数据"></a> <strong>Supplier&lt;T&gt;：无输入参数，返回一个数据</strong></h4>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Supplier&lt;String&gt; planetFactory = () -&gt; </span><br><span class="line">    planets[(<span class="type">int</span>) floor(random() * <span class="number">8</span>)];</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; <span class="number">5</span>; i++) &#123;</span><br><span class="line">    System.out.println(planetFactory.get());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="functiont接收一个参数返回一个参数"><a class="markdownIt-Anchor" href="#functiont接收一个参数返回一个参数"></a> <strong>Function&lt;T&gt;：接收一个参数，返回一个参数</strong></h4>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Function&lt;String, String&gt; upper = s -&gt; </span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//可以做更复杂的操作</span></span><br><span class="line">        <span class="keyword">return</span> s.toUpperCase();</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(String p : planets)    &#123;</span><br><span class="line">    System.out.println(upper.apply(p));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3方法引用"><a class="markdownIt-Anchor" href="#3方法引用"></a> <strong>3.方法引用</strong></h2>
+<ul>
+<li>
+<p>Lambda表达式支持传递现有的类库函数</p>
+</li>
+<li>
+<p>Class::staticMethod，如 Math::abs方法</p>
+</li>
+<li>
+<p>Class::instanceMethod，如String::compareToIgnoreCase方法</p>
+</li>
+<li>
+<p>object::instanceMethod，如System.out::println方法</p>
+<ul>
+<li>支持this::instanceMethod 调用</li>
+<li>支持super::instanceMethod调用</li>
+</ul>
+</li>
+<li>
+<p>Class::new，调用某类构造函数，支持单个对象构建</p>
+</li>
+<li>
+<p>Class[]::new，调用某类构造函数，支持数组对象构建</p>
+</li>
+</ul>
+<h3 id="classstaticmethod"><a class="markdownIt-Anchor" href="#classstaticmethod"></a> <strong>Class::staticMethod</strong></h3>
+<ul>
+<li>等价于提供方法参数的Lambda表达式</li>
+<li>Math::abs 等价于 x -&gt; Math.abs(x)\</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ClassStaticMethodTest</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">double</span> <span class="title function_">worker</span><span class="params">(NumFunction nf, <span class="type">double</span> num)</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">return</span> nf.calculate(num);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">double</span> <span class="variable">a</span> <span class="operator">=</span> -<span class="number">5.3</span>;</span><br><span class="line">        <span class="type">double</span> <span class="variable">b</span> <span class="operator">=</span> worker(Math::abs, a);</span><br><span class="line">        System.out.println(b);</span><br><span class="line">        </span><br><span class="line">        <span class="type">double</span> <span class="variable">c</span> <span class="operator">=</span> worker(Math::floor, a);</span><br><span class="line">        System.out.println(c);</span><br><span class="line">    &#125;    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">NumFunction</span> &#123;</span><br><span class="line">    <span class="type">double</span> <span class="title function_">calculate</span><span class="params">(<span class="type">double</span> num)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="classinstancemethod"><a class="markdownIt-Anchor" href="#classinstancemethod"></a> <strong>Class::instanceMethod</strong></h3>
+<ul>
+<li>第一个参数将变成方法的执行体</li>
+<li>String::compareToIgnoreCase等价于(x,y)-&gt;x.compareToIgnoreCase(y)</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">String[] planets = <span class="keyword">new</span> <span class="title class_">String</span>[] &#123; </span><br><span class="line">        <span class="string">&quot;Mercury&quot;</span>, <span class="string">&quot;Venus&quot;</span>, <span class="string">&quot;Earth&quot;</span>, <span class="string">&quot;Mars&quot;</span>, </span><br><span class="line">        <span class="string">&quot;Jupiter&quot;</span>, <span class="string">&quot;Saturn&quot;</span>, <span class="string">&quot;Uranus&quot;</span>,</span><br><span class="line">        <span class="string">&quot;Neptune&quot;</span> &#125;;    </span><br><span class="line"></span><br><span class="line">Arrays.sort(planets, String::compareToIgnoreCase);</span><br><span class="line">System.out.println(Arrays.toString(planets));        </span><br></pre></td></tr></table></figure>
+<h3 id="objectinstancemethod"><a class="markdownIt-Anchor" href="#objectinstancemethod"></a> <strong>object::instanceMethod</strong></h3>
+<ul>
+<li>等价于提供方法参数的Lambda表达式</li>
+<li>System.out::println等价于x-&gt;System.out.println(x)</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ObjectInstanceMethodTest</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">worker</span><span class="params">(PrintFunction pf, String s)</span> &#123;</span><br><span class="line">        pf.exec(s);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">a</span> <span class="operator">=</span> <span class="string">&quot;abc&quot;</span>;</span><br><span class="line">        worker(System.out::println, a);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">PrintFunction</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">exec</span><span class="params">(String s)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>支持this::instanceMethod</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">ThisInstanceMethodTest</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">ThisInstanceMethodTest</span> <span class="variable">obj</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ThisInstanceMethodTest</span>();</span><br><span class="line">        obj.test();</span><br><span class="line">    &#125;    </span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">test</span><span class="params">()</span>    &#123;</span><br><span class="line">        String[] planets = <span class="keyword">new</span> <span class="title class_">String</span>[] &#123; </span><br><span class="line">                <span class="string">&quot;Mercury&quot;</span>, <span class="string">&quot;Venus&quot;</span>, <span class="string">&quot;Earth&quot;</span>, <span class="string">&quot;Mars&quot;</span>, </span><br><span class="line">                <span class="string">&quot;Jupiter&quot;</span>, <span class="string">&quot;Saturn&quot;</span>, <span class="string">&quot;Uranus&quot;</span>, <span class="string">&quot;Neptune&quot;</span> &#125;;    </span><br><span class="line">                </span><br><span class="line">        Arrays.sort(planets, <span class="built_in">this</span>::lengthCompare);</span><br><span class="line">        System.out.println(Arrays.toString(planets));    </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">lengthCompare</span><span class="params">(String first, String second)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> first.length() - second.length();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>支持super::instanceMethod</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SuperInstanceMethodTest</span> <span class="keyword">extends</span> <span class="title class_">Father</span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        <span class="type">SuperInstanceMethodTest</span> <span class="variable">obj</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">SuperInstanceMethodTest</span>();</span><br><span class="line">        obj.test();</span><br><span class="line">    &#125;    </span><br><span class="line">    </span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">test</span><span class="params">()</span>    &#123;</span><br><span class="line">        String[] planets = <span class="keyword">new</span> <span class="title class_">String</span>[] &#123; </span><br><span class="line">                <span class="string">&quot;Mercury&quot;</span>, <span class="string">&quot;Venus&quot;</span>, <span class="string">&quot;Earth&quot;</span>, <span class="string">&quot;Mars&quot;</span>, </span><br><span class="line">                <span class="string">&quot;Jupiter&quot;</span>, <span class="string">&quot;Saturn&quot;</span>, <span class="string">&quot;Uranus&quot;</span>, <span class="string">&quot;Neptune&quot;</span> &#125;;    </span><br><span class="line">                </span><br><span class="line">        Arrays.sort(planets, <span class="built_in">super</span>::lengthCompare);</span><br><span class="line">        System.out.println(Arrays.toString(planets));    </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Father</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">lengthCompare</span><span class="params">(String first, String second)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span> first.length() - second.length();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="classnew"><a class="markdownIt-Anchor" href="#classnew"></a> <strong>Class::new</strong></h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Supplier&lt;Person&gt; s = Person::<span class="keyword">new</span>;</span><br><span class="line"><span class="type">Person</span> <span class="variable">p</span> <span class="operator">=</span> s.get();</span><br></pre></td></tr></table></figure>
+<h3 id="classnew-2"><a class="markdownIt-Anchor" href="#classnew-2"></a> <strong>Class[]::new</strong></h3>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">IntFunction&lt;<span class="type">int</span>[]&gt; intArray = <span class="type">int</span>[]::<span class="keyword">new</span>;        </span><br><span class="line"><span class="type">int</span>[] nums = intArray.apply(<span class="number">10</span>); </span><br><span class="line"></span><br><span class="line">Function&lt;Integer, Person[]&gt; personArray = Person[]::<span class="keyword">new</span>;</span><br><span class="line">Person[] persons = personArray.apply(<span class="number">5</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="4lambda表达式应用"><a class="markdownIt-Anchor" href="#4lambda表达式应用"></a> <strong>4.Lambda表达式应用</strong></h2>
+<ul>
+<li>Lambda表达式<strong>没有存储目标类型(target type)的信息</strong></li>
+<li>重载调用，依据重载的规则和类型参数推理</li>
+</ul>
+<h3 id="变量遮蔽"><a class="markdownIt-Anchor" href="#变量遮蔽"></a> <strong>变量遮蔽</strong></h3>
+<ul>
+<li><strong>Lambda表达式和匿名内部类/局部内部类一样，可以捕获变量(capture variables)，即访问外部嵌套块的变量</strong>
+<ul>
+<li>但是变量要求是final或者是effectively final的</li>
+</ul>
+</li>
+<li><strong>Lambda表达式没有变量遮蔽问题，因为它的内容和嵌套块有着相同的作用域</strong>
+<ul>
+<li>在Lambda表达式中，不可以声明与(外部嵌套块)局部变量同名的参数或者局部变量</li>
+</ul>
+</li>
+<li>表达式中的this，就是创建这个表达式的方法的this参数</li>
+</ul>
+<h3 id="优先级"><a class="markdownIt-Anchor" href="#优先级"></a> <strong>优先级</strong></h3>
+<ul>
+<li>Lambda表达式优先级比嵌套类要高
+<ul>
+<li>短小精干，本身可以自描述的</li>
+<li>无法创建命名实例，无法获取自身的引用(this)</li>
+</ul>
+</li>
+<li>方法引用比自定义Lambda表达式的优先级高
+<ul>
+<li>系统自带的方法引用更简洁高效</li>
+<li>对于复杂的Lambda表达式，采用方法引用比内嵌Lambda表达式更清晰，更容易维护</li>
+</ul>
+</li>
+<li>坚持使用标准的函数式接口
+<ul>
+<li>更容易学习，提高互操作性</li>
+</ul>
+</li>
+</ul>
+
+            
+        </div>
+        <footer class="article-footer">
+            <a data-url="https://d-sketon.github.io/20210922/java-lambda/" data-id="cliioj32l000cw4vr0q0l8fr2" data-title="Java Lambda表达式"
+               class="article-share-link">分享</a>
+            
+                <a href="/20210922/java-lambda/#comments" class="article-comment-link">
+                    <span class="post-comments-count valine-comment-count" data-xid="/20210922/java-lambda/"
+                          itemprop="commentCount"></span>
+                    留言
+                </a>
+            
+            
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li></ul>
+
+        </footer>
+    </div>
+    
+        
+    <nav id="article-nav">
+        
+            <div class="article-nav-link-wrap article-nav-link-left">
+                
+                    
+                    
+                        <img data-src="https://d-sketon.top/img/backimg/bg19.jpg" data-sizes="auto" alt="Java Stream流" class="lazyload">
+                    
+                
+                <a href="/20210922/java-stream/"></a>
+                <div class="article-nav-caption">前一篇</div>
+                <div class="article-nav-title">
+                    
+                        Java Stream流
+                    
+                </div>
+            </div>
+        
+        
+            <div class="article-nav-link-wrap article-nav-link-right">
+                
+                    
+                    
+                        <img data-src="https://d-sketon.top/img/backimg/bg26.jpeg" data-sizes="auto" alt="Java 嵌套类" class="lazyload">
+                    
+                
+                <a href="/20210922/java-nested-class/"></a>
+                <div class="article-nav-caption">后一篇</div>
+                <div class="article-nav-title">
+                    
+                        Java 嵌套类
+                    
+                </div>
+            </div>
+        
+    </nav>
+
+    
+</article>
+
+
+    <section id="comments" class="vcomment">
+
+    </section>
+</section>
+                
+                    <aside id="sidebar">
+    <div class="sidebar-wrap">
+        <div class="sidebar-author">
+            <img data-src="/avatar/avatar.jpg" data-sizes="auto" alt="D-Sketon" class="lazyload">
+            <div class="sidebar-author-name">D-Sketon</div>
+            <div class="sidebar-description">D-Sketon&#39;s blog</div>
+        </div>
+        <div class="sidebar-state">
+            <div class="sidebar-state-article">
+                <div>文章</div>
+                <div class="sidebar-state-number">47</div>
+            </div>
+            <div class="sidebar-state-category">
+                <div>分类</div>
+                <div class="sidebar-state-number">9</div>
+            </div>
+            <div class="sidebar-state-tag">
+                <div>标签</div>
+                <div class="sidebar-state-number">19</div>
+            </div>
+        </div>
+        <div class="sidebar-social">
+            
+                <div class=icon-github>
+                    <a href=https://github.com/D-Sketon itemprop="url" target="_blank"></a>
+                </div>
+            
+        </div>
+        <div class="sidebar-menu">
+            
+                <div class="sidebar-menu-link-wrap">
+                    <a class="sidebar-menu-link-dummy" href="/"></a>
+                    <span class="sidebar-menu-icon"></span>
+                    <div class="sidebar-menu-link">首页</div>
+                </div>
+            
+                <div class="sidebar-menu-link-wrap">
+                    <a class="sidebar-menu-link-dummy" href="/archives"></a>
+                    <span class="sidebar-menu-icon"></span>
+                    <div class="sidebar-menu-link">归档</div>
+                </div>
+            
+                <div class="sidebar-menu-link-wrap">
+                    <a class="sidebar-menu-link-dummy" href="/about"></a>
+                    <span class="sidebar-menu-icon"></span>
+                    <div class="sidebar-menu-link">关于</div>
+                </div>
+            
+                <div class="sidebar-menu-link-wrap">
+                    <a class="sidebar-menu-link-dummy" href="/friend"></a>
+                    <span class="sidebar-menu-icon"></span>
+                    <div class="sidebar-menu-link">友链</div>
+                </div>
+            
+        </div>
+    </div>
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">分类</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Java/">Java</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Java/Java%E8%BF%9B%E9%98%B6/">Java进阶</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Java/Java%E9%AB%98%E9%98%B6/">Java高阶</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/jQuery/">jQuery</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/vue/">vue</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/">计软杂谈</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9F%B3MAD/">音MAD</a></li></ul>
+        </div>
+    </div>
+
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">标签云</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/CSAPP/" style="font-size: 17.5px;">CSAPP</a> <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a> <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/Minecraft/" style="font-size: 12.5px;">Minecraft</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/jQuery/" style="font-size: 10px;">jQuery</a> <a href="/tags/leancloud/" style="font-size: 10px;">leancloud</a> <a href="/tags/spigot/" style="font-size: 12.5px;">spigot</a> <a href="/tags/vue/" style="font-size: 10px;">vue</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 15px;">前端</a> <a href="/tags/%E5%B9%B6%E8%A1%8C/" style="font-size: 10px;">并行</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 10px;">数据库</a> <a href="/tags/%E6%97%A5%E8%AF%AD/" style="font-size: 10px;">日语</a> <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 10px;">测试</a> <a href="/tags/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/" style="font-size: 17.5px;">深入理解计算机系统</a> <a href="/tags/%E7%88%AC%E8%99%AB/" style="font-size: 10px;">爬虫</a> <a href="/tags/%E7%AE%97%E6%B3%95/" style="font-size: 10px;">算法</a> <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" style="font-size: 17.5px;">计算机网络</a> <a href="/tags/%E9%9F%B3MAD/" style="font-size: 12.5px;">音MAD</a>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">二月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">一月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/12/">十二月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/09/">九月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/08/">八月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">七月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">六月 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">十二月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">十月 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/09/">九月 2021</a></li></ul>
+        </div>
+    </div>
+
+
+    
+</aside>
+                
+            </div>
+            <footer id="footer">
+    <div class="footer-line"></div>
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            
+            <div>
+                <span class="icon-copyright"></span>
+                2020-2023
+                <span class="footer-info-sep"></span>
+                D-Sketon
+            </div>
+            
+                <div>
+                    基于&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>&nbsp;
+                    Theme.<a href="https://github.com/D-Sketon/hexo-theme-reimu" target="_blank">Reimu</a>
+                </div>
+            
+            
+                <div>
+                    <span class="icon-brush"></span>
+                    164k
+                    &nbsp;|&nbsp;
+                    <span class="icon-coffee"></span>
+                    11:22
+                </div>
+            
+            
+                <div>
+                    <span class="icon-eye"></span>
+                    <span id="busuanzi_container_site_pv">总访问量&nbsp;<span id="busuanzi_value_site_pv"></span></span>
+                    &nbsp;|&nbsp;
+                    <span class="icon-user"></span>
+                    <span id="busuanzi_container_site_uv">总访客量&nbsp;<span id="busuanzi_value_site_uv"></span></span>
+                </div>
+            
+        </div>
+    </div>
+</footer>
+  
+        </div>
+        <nav id="mobile-nav">
+    <div class="sidebar-wrap">
+        <div class="sidebar-author">
+            <img data-src="/avatar/avatar.jpg" data-sizes="auto" alt="D-Sketon" class="lazyload">
+            <div class="sidebar-author-name">D-Sketon</div>
+            <div class="sidebar-description">D-Sketon&#39;s blog</div>
+        </div>
+        <div class="sidebar-state">
+            <div class="sidebar-state-article">
+                <div>文章</div>
+                <div class="sidebar-state-number">47</div>
+            </div>
+            <div class="sidebar-state-category">
+                <div>分类</div>
+                <div class="sidebar-state-number">9</div>
+            </div>
+            <div class="sidebar-state-tag">
+                <div>标签</div>
+                <div class="sidebar-state-number">19</div>
+            </div>
+        </div>
+        <div class="sidebar-social">
+            
+                <div class=icon-github>
+                    <a href=https://github.com/D-Sketon itemprop="url" target="_blank"></a>
+                </div>
+            
+        </div>
+        <div class="sidebar-menu">
+            
+                <div class="sidebar-menu-link-wrap">
+                    <a class="sidebar-menu-link-dummy" href="/"></a>
+                    <span class="sidebar-menu-icon"></span>
+                    <div class="sidebar-menu-link">首页</div>
+                </div>
+            
+                <div class="sidebar-menu-link-wrap">
+                    <a class="sidebar-menu-link-dummy" href="/archives"></a>
+                    <span class="sidebar-menu-icon"></span>
+                    <div class="sidebar-menu-link">归档</div>
+                </div>
+            
+                <div class="sidebar-menu-link-wrap">
+                    <a class="sidebar-menu-link-dummy" href="/about"></a>
+                    <span class="sidebar-menu-icon"></span>
+                    <div class="sidebar-menu-link">关于</div>
+                </div>
+            
+                <div class="sidebar-menu-link-wrap">
+                    <a class="sidebar-menu-link-dummy" href="/friend"></a>
+                    <span class="sidebar-menu-icon"></span>
+                    <div class="sidebar-menu-link">友链</div>
+                </div>
+            
+        </div>
+    </div>
+</nav>
+        
+<script src="https://unpkg.com/jquery@3.7.0/dist/jquery.min.js"></script>
+
+
+<script src="https://unpkg.com/lazysizes@5.3.2/lazysizes.min.js"></script>
+
+
+<script src="https://unpkg.com/clipboard@2.0.11/dist/clipboard.min.js"></script>
+
+
+
+    
+<script src="https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+
+
+    
+<script src="https://unpkg.com/busuanzi@2.3.0/bsz.pure.mini.js"></script>
+
+
+
+
+    
+<script src="https://unpkg.com/mermaid@9.4.3/dist/mermaid.min.js"></script>
+
+    <script>
+        if (window.mermaid) {
+            mermaid.initialize({theme: 'forest'});
+        }
+    </script>
+
+
+
+<script src="/js/script.js"></script>
+
+
+    
+
+
+    
+<script src="https://unpkg.com/valine@1.5.1/dist/Valine.min.js"></script>
+
+    <script>
+        var GUEST_INFO = ['nick', 'mail', 'link'];
+        var guest_info = 'nick,mail,link'.split(',').filter(function (item) {
+            return GUEST_INFO.indexOf(item) > -1
+        });
+        var recordIP = JSON.parse('true');
+        var highlight = JSON.parse('true');
+
+        new Valine({
+            el: '.vcomment',
+            appId: "OEAoGNCMMSmUkuPTZGAJvItD-gzGzoHsz",
+            appKey: "oH02C1lbho3eofYJFNuXQIcg",
+            placeholder: "Just go go",
+            pageSize: '10',
+            avatar: 'mp',
+            lang: 'zh-cn',
+            recordIP: recordIP,
+            highlight: highlight
+        });
+    </script>
+
+
+
+    
+<script src="https://unpkg.com/algoliasearch@4.17.1/dist/algoliasearch-lite.umd.js"></script>
+
+    
+<script src="https://unpkg.com/instantsearch.js@4.56.1/dist/instantsearch.production.min.js"></script>
+
+    
+<script src="/js/search.js"></script>
+
+    <script>
+        var CONFIG = {
+            root: '/',
+            algolia: {
+                applicationID: "AIE5T9AKYQ",
+                apiKey: "2b855b06a058dd80bc84972874e020aa",
+                indexName: "blog_reimu",
+                hits: {
+                    "per_page": parseInt("10")
+                },
+                labels: {
+                    "input_placeholder": "搜索.....",
+                    "hits_empty": "未发现与 「${query}」相关内容",
+                    "hits_stats": "找到${hits}条结果（用时 ${time} ms）"
+                }
+            }
+        };
+    </script>
+
+    </div>
+    <div class="site-search">
+        <div class="algolia-popup popup">
+            <div class="algolia-search">
+                <span class="algolia-search-input-icon"></span>
+                <div class="algolia-search-input" id="algolia-search-input"></div>
+            </div>
+
+            <div class="algolia-results">
+                <div id="algolia-stats"></div>
+                <div id="algolia-hits"></div>
+                <div id="algolia-pagination" class="algolia-pagination"></div>
+            </div>
+
+            <span class="popup-btn-close"></span>
+        </div>
+    </div>
+    <!-- hexo injector body_end start -->
+<script src="/js/insertHighlight.js"></script>
+<!-- hexo injector body_end end --></body>
+    </html>
+
