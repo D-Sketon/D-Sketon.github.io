@@ -6,12 +6,32 @@
     <head>
     <meta charset="utf-8">
     
+
+    
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?55ca897d064d6eb98df32d62c6984cc0";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
     
     <title>
         标签: hexo |
         
         拔剑Sketon</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CUbuntu%20Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+    
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free/css/v4-font-face.min.css">
+
+    
+<link rel="stylesheet" href="/css/loader.css">
+
     <meta name="description" content="D-Sketon&#39;s blog">
 <meta property="og:type" content="website">
 <meta property="og:title" content="拔剑Sketon">
@@ -25,11 +45,11 @@
         <link rel="alternate" href="/atom.xml" title="拔剑Sketon" type="application/atom+xml">
     
     
-        <link rel="shortcut icon" href="/css/images/favicon.ico">
+        <link rel="shortcut icon" href="/images/favicon.ico">
     
     
         
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@latest/index.min.css">
+<link rel="stylesheet" href="https://unpkg.com/typeface-source-code-pro@1.1.13/index.css">
 
     
     
@@ -46,27 +66,55 @@
 
     
     
+    
+    
 <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js"></script>
 
 <meta name="generator" content="Hexo 6.3.0"></head>
-  
+
     <body>
+    
+<div id='loader'>
+  <div class="loading-left-bg"></div>
+  <div class="loading-right-bg"></div>
+  <div class="spinner-box">
+    <div class="loading-taichi">
+      <svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+      <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="#ff6e6b" />
+      <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z" fill="#fd0d00" />
+      <path d="M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95" fill="#fd0d00" />
+    </svg>
+    </div>
+    <div class="loading-word">少女祈祷中...</div>
+  </div>
+</div>
+</div>
+
+<script>
+  const endLoading = function() {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loader').classList.add("loading");
+  }
+  window.addEventListener('load', endLoading);
+</script>
+
+
     <div id="container">
         <div id="wrap">
             <header id="header">
     
-        <img data-src="/css/images/banner.jpg" data-sizes="auto" alt="" class="lazyload">
+        <img data-src="/images/banner.jpg" data-sizes="auto" alt="" class="lazyload">
     
     <div id="header-outer" class="outer">
         <div id="header-title" class="inner">
-            <h1 id="logo-wrap">
+            <div id="logo-wrap">
                 
                     
                     
-                        <a href="/" id="logo">标签</a>
+                        <a href="/" id="logo"><h1>标签</h1></a>
                     
                 
-            </h1>
+            </div>
             
                 
                 
@@ -117,7 +165,7 @@
         </div>
     </div>
 </header>
-  
+
             <div id="content" class="outer">
                 <section id="main">
     <div class="archives-outer-wrap">
@@ -148,7 +196,7 @@
                 </div>
             
                 <div class="archives-tag-list-item">
-                    <a class="archives-tag-list-link" href="/tags/jQuery/">jQuery</a>
+                    <a class="archives-tag-list-link" href="/tags/vue/">vue</a>
                 </div>
             
                 <div class="archives-tag-list-item">
@@ -156,7 +204,7 @@
                 </div>
             
                 <div class="archives-tag-list-item">
-                    <a class="archives-tag-list-link" href="/tags/vue/">vue</a>
+                    <a class="archives-tag-list-link" href="/tags/jQuery/">jQuery</a>
                 </div>
             
                 <div class="archives-tag-list-item">
@@ -227,7 +275,7 @@
                 </div>
             
                 <div class="archives-category-list-item">
-                    <a class="archives-category-list-link" href="/categories/前端/jQuery/">jQuery</a>
+                    <a class="archives-category-list-link" href="/categories/前端/vue/">vue</a>
                 </div>
             
                 <div class="archives-category-list-item">
@@ -235,7 +283,7 @@
                 </div>
             
                 <div class="archives-category-list-item">
-                    <a class="archives-category-list-link" href="/categories/前端/vue/">vue</a>
+                    <a class="archives-category-list-link" href="/categories/前端/jQuery/">jQuery</a>
                 </div>
             
         </div>
@@ -267,6 +315,7 @@
         
     </div>
 </li>
+
                 
                 
             </ul>
@@ -274,6 +323,8 @@
     </section>
     
     </div>
+
+
 
 </section>
                 
@@ -352,6 +403,7 @@
         </div>
     </div>
 
+
     
         
     <div class="widget-wrap">
@@ -364,10 +416,11 @@
 
     
 </aside>
+
                 
             </div>
             <footer id="footer">
-    <div class="footer-line"></div>
+    <div style="width: 100%; overflow: hidden"><div class="footer-line"></div></div>
     <div class="outer">
         <div id="footer-info" class="inner">
             
@@ -404,7 +457,7 @@
         </div>
     </div>
 </footer>
-  
+
         </div>
         <nav id="mobile-nav">
     <div class="sidebar-wrap">
@@ -463,6 +516,7 @@
         </div>
     </div>
 </nav>
+
         
 <script src="https://unpkg.com/jquery@3.7.0/dist/jquery.min.js"></script>
 
@@ -499,7 +553,7 @@
 <script src="/js/script.js"></script>
 
 
-    
+
 
 
     
@@ -525,6 +579,14 @@
             highlight: highlight
         });
     </script>
+
+
+
+
+
+
+
+
 
 
 
@@ -555,6 +617,7 @@
             }
         };
     </script>
+
 
     </div>
     <div class="site-search">

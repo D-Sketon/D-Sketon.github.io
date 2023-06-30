@@ -12,12 +12,32 @@
 <!-- hexo injector head_begin end -->
     <meta charset="utf-8">
     
+
+    
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?55ca897d064d6eb98df32d62c6984cc0";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
     
     <title>
         Hexo源码分析（一）issue #4976的研究 |
         
         拔剑Sketon</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CUbuntu%20Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+    
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free/css/v4-font-face.min.css">
+
+    
+<link rel="stylesheet" href="/css/loader.css">
+
     <meta name="description" content="最近看到了Hexo的issue \#4976，其中提到了大文件的CSS在生成的过程中可能会丢失部分代码。本人感觉这个问题非常有意思，于是自己也尝试了一下大文件的CSS，没想到也成功复现了这个问题。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo源码分析（一）issue #4976的研究">
@@ -34,11 +54,11 @@
         <link rel="alternate" href="/atom.xml" title="拔剑Sketon" type="application/atom+xml">
     
     
-        <link rel="shortcut icon" href="/css/images/favicon.ico">
+        <link rel="shortcut icon" href="/images/favicon.ico">
     
     
         
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@latest/index.min.css">
+<link rel="stylesheet" href="https://unpkg.com/typeface-source-code-pro@1.1.13/index.css">
 
     
     
@@ -55,27 +75,55 @@
 
     
     
+    
+    
 <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js"></script>
 
 <meta name="generator" content="Hexo 6.3.0"></head>
-  
+
     <body>
+    
+<div id='loader'>
+  <div class="loading-left-bg"></div>
+  <div class="loading-right-bg"></div>
+  <div class="spinner-box">
+    <div class="loading-taichi">
+      <svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+      <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="#ff6e6b" />
+      <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z" fill="#fd0d00" />
+      <path d="M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95" fill="#fd0d00" />
+    </svg>
+    </div>
+    <div class="loading-word">少女祈祷中...</div>
+  </div>
+</div>
+</div>
+
+<script>
+  const endLoading = function() {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loader').classList.add("loading");
+  }
+  window.addEventListener('load', endLoading);
+</script>
+
+
     <div id="container">
         <div id="wrap">
             <header id="header">
     
-        <img data-src="/css/images/banner.jpg" data-sizes="auto" alt="Hexo源码分析（一）issue #4976的研究" class="lazyload">
+        <img data-src="/images/banner.jpg" data-sizes="auto" alt="Hexo源码分析（一）issue #4976的研究" class="lazyload">
     
     <div id="header-outer" class="outer">
         <div id="header-title" class="inner">
-            <h1 id="logo-wrap">
+            <div id="logo-wrap">
                 
                     
                     
-                        <a href="/" id="logo">Hexo源码分析（一）issue #4976的研究</a>
+                        <a href="/" id="logo"><h1>Hexo源码分析（一）issue #4976的研究</h1></a>
                     
                 
-            </h1>
+            </div>
             
                 
                 
@@ -122,7 +170,7 @@
         </div>
     </div>
 </header>
-  
+
             <div id="content" class="outer">
                 <section id="main"><article id="post-Hexo源码分析（一）" class="h-entry article article-type-post"
          itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
@@ -140,9 +188,11 @@
         <a class="article-category-link" href="/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/">计软杂谈</a>
     </div>
 
+
         </div>
         <div class="hr-line"></div>
         
+
         <div class="e-content article-entry" itemprop="articleBody">
             
                 <blockquote>
@@ -234,7 +284,7 @@ CSS文件的<code>renderable</code>是<code>true</code>，所以会进入<code>p
             
         </div>
         <footer class="article-footer">
-            <a data-url="https://d-sketon.github.io/20220912/hexo-source1/" data-id="cliioj32k000bw4vr4t121314" data-title="Hexo源码分析（一）issue #4976的研究"
+            <a data-url="https://d-sketon.github.io/20220912/hexo-source1/" data-id="cljimdkxe00085cvrcknh3oiz" data-title="Hexo源码分析（一）issue #4976的研究"
                class="article-share-link">分享</a>
             
                 <a href="/20220912/hexo-source1/#comments" class="article-comment-link">
@@ -244,7 +294,10 @@ CSS文件的<code>renderable</code>是<code>true</code>，所以会进入<code>p
                 </a>
             
             
+            
+            
     <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+
 
         </footer>
     </div>
@@ -256,16 +309,16 @@ CSS文件的<code>renderable</code>是<code>true</code>，所以会进入<code>p
                 
                     
                     
-                        <img data-src="https://d-sketon.top/img/backimg/bg21.jpg" data-sizes="auto" alt="算法导论 学习笔记" class="lazyload">
+                        <img data-src="https://d-sketon.top/img/backimg/bg10.jpg" data-sizes="auto" alt="算法导论 学习笔记" class="lazyload">
                     
                 
                 <a href="/20221229/clrs-book-note/"></a>
                 <div class="article-nav-caption">前一篇</div>
-                <div class="article-nav-title">
+                <h3 class="article-nav-title">
                     
                         算法导论 学习笔记
                     
-                </div>
+                </h3>
             </div>
         
         
@@ -273,19 +326,20 @@ CSS文件的<code>renderable</code>是<code>true</code>，所以会进入<code>p
                 
                     
                     
-                        <img data-src="https://d-sketon.top/img/backimg/bg7.jpg" data-sizes="auto" alt="hexo-minecraft-skin-viewer插件Demo" class="lazyload">
+                        <img data-src="https://d-sketon.top/img/backimg/bg22.jpg" data-sizes="auto" alt="hexo-minecraft-skin-viewer插件Demo" class="lazyload">
                     
                 
                 <a href="/20220902/hexo-mcskin-demo/"></a>
                 <div class="article-nav-caption">后一篇</div>
-                <div class="article-nav-title">
+                <h3 class="article-nav-title">
                     
                         hexo-minecraft-skin-viewer插件Demo
                     
-                </div>
+                </h3>
             </div>
         
     </nav>
+
 
     
 </article>
@@ -294,6 +348,16 @@ CSS文件的<code>renderable</code>是<code>true</code>，所以会进入<code>p
     <section id="comments" class="vcomment">
 
     </section>
+
+
+
+
+
+
+
+
+
+
 </section>
                 
                     <aside id="sidebar">
@@ -371,6 +435,7 @@ CSS文件的<code>renderable</code>是<code>true</code>，所以会进入<code>p
         </div>
     </div>
 
+
     
         
     <div class="widget-wrap">
@@ -383,10 +448,11 @@ CSS文件的<code>renderable</code>是<code>true</code>，所以会进入<code>p
 
     
 </aside>
+
                 
             </div>
             <footer id="footer">
-    <div class="footer-line"></div>
+    <div style="width: 100%; overflow: hidden"><div class="footer-line"></div></div>
     <div class="outer">
         <div id="footer-info" class="inner">
             
@@ -423,7 +489,7 @@ CSS文件的<code>renderable</code>是<code>true</code>，所以会进入<code>p
         </div>
     </div>
 </footer>
-  
+
         </div>
         <nav id="mobile-nav">
     <div class="sidebar-wrap">
@@ -482,6 +548,7 @@ CSS文件的<code>renderable</code>是<code>true</code>，所以会进入<code>p
         </div>
     </div>
 </nav>
+
         
 <script src="https://unpkg.com/jquery@3.7.0/dist/jquery.min.js"></script>
 
@@ -518,7 +585,7 @@ CSS文件的<code>renderable</code>是<code>true</code>，所以会进入<code>p
 <script src="/js/script.js"></script>
 
 
-    
+
 
 
     
@@ -544,6 +611,14 @@ CSS文件的<code>renderable</code>是<code>true</code>，所以会进入<code>p
             highlight: highlight
         });
     </script>
+
+
+
+
+
+
+
+
 
 
 
@@ -574,6 +649,7 @@ CSS文件的<code>renderable</code>是<code>true</code>，所以会进入<code>p
             }
         };
     </script>
+
 
     </div>
     <div class="site-search">

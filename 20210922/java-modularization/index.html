@@ -12,12 +12,32 @@
 <!-- hexo injector head_begin end -->
     <meta charset="utf-8">
     
+
+    
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?55ca897d064d6eb98df32d62c6984cc0";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
     
     <title>
         Java 模块化 |
         
         拔剑Sketon</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CUbuntu%20Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+    
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free/css/v4-font-face.min.css">
+
+    
+<link rel="stylesheet" href="/css/loader.css">
+
     <meta name="description" content="MOOC个人学习笔记Java模块化，包含模块化概述，模块创建和运行，模块信息文件，服务和Java模块化应用">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java 模块化">
@@ -34,11 +54,11 @@
         <link rel="alternate" href="/atom.xml" title="拔剑Sketon" type="application/atom+xml">
     
     
-        <link rel="shortcut icon" href="/css/images/favicon.ico">
+        <link rel="shortcut icon" href="/images/favicon.ico">
     
     
         
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@latest/index.min.css">
+<link rel="stylesheet" href="https://unpkg.com/typeface-source-code-pro@1.1.13/index.css">
 
     
     
@@ -55,27 +75,55 @@
 
     
     
+    
+    
 <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js"></script>
 
 <meta name="generator" content="Hexo 6.3.0"></head>
-  
+
     <body>
+    
+<div id='loader'>
+  <div class="loading-left-bg"></div>
+  <div class="loading-right-bg"></div>
+  <div class="spinner-box">
+    <div class="loading-taichi">
+      <svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+      <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="#ff6e6b" />
+      <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z" fill="#fd0d00" />
+      <path d="M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95" fill="#fd0d00" />
+    </svg>
+    </div>
+    <div class="loading-word">少女祈祷中...</div>
+  </div>
+</div>
+</div>
+
+<script>
+  const endLoading = function() {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loader').classList.add("loading");
+  }
+  window.addEventListener('load', endLoading);
+</script>
+
+
     <div id="container">
         <div id="wrap">
             <header id="header">
     
-        <img data-src="/css/images/banner.jpg" data-sizes="auto" alt="Java 模块化" class="lazyload">
+        <img data-src="/images/banner.jpg" data-sizes="auto" alt="Java 模块化" class="lazyload">
     
     <div id="header-outer" class="outer">
         <div id="header-title" class="inner">
-            <h1 id="logo-wrap">
+            <div id="logo-wrap">
                 
                     
                     
-                        <a href="/" id="logo">Java 模块化</a>
+                        <a href="/" id="logo"><h1>Java 模块化</h1></a>
                     
                 
-            </h1>
+            </div>
             
                 
                 
@@ -122,7 +170,7 @@
         </div>
     </div>
 </header>
-  
+
             <div id="content" class="outer">
                 <section id="main"><article id="post-模块化" class="h-entry article article-type-post"
          itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
@@ -140,9 +188,11 @@
         <a class="article-category-link" href="/categories/Java/">Java</a><a class="article-category-link" href="/categories/Java/Java%E9%AB%98%E9%98%B6/">Java高阶</a>
     </div>
 
+
         </div>
         <div class="hr-line"></div>
         
+
         <div class="e-content article-entry" itemprop="articleBody">
             
                 <h2 id="1模块化概述"><a class="markdownIt-Anchor" href="#1模块化概述"></a> <strong>1.模块化概述</strong></h2>
@@ -370,7 +420,7 @@
             
         </div>
         <footer class="article-footer">
-            <a data-url="https://d-sketon.github.io/20210922/java-modularization/" data-id="cliioj33k002bw4vr031t9ohg" data-title="Java 模块化"
+            <a data-url="https://d-sketon.github.io/20210922/java-modularization/" data-id="cljimdky9002i5cvra8riar4b" data-title="Java 模块化"
                class="article-share-link">分享</a>
             
                 <a href="/20210922/java-modularization/#comments" class="article-comment-link">
@@ -380,7 +430,10 @@
                 </a>
             
             
+            
+            
     <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/" rel="tag">Java</a></li></ul>
+
 
         </footer>
     </div>
@@ -392,16 +445,16 @@
                 
                     
                     
-                        <img data-src="https://d-sketon.top/img/backimg/bg10.jpg" data-sizes="auto" alt="Java 字节码" class="lazyload">
+                        <img data-src="https://d-sketon.top/img/backimg/bg11.jpg" data-sizes="auto" alt="Java 字节码" class="lazyload">
                     
                 
                 <a href="/20210922/java-bytecode/"></a>
                 <div class="article-nav-caption">前一篇</div>
-                <div class="article-nav-title">
+                <h3 class="article-nav-title">
                     
                         Java 字节码
                     
-                </div>
+                </h3>
             </div>
         
         
@@ -409,19 +462,20 @@
                 
                     
                     
-                        <img data-src="https://d-sketon.top/img/backimg/bg21.jpg" data-sizes="auto" alt="Java Stream流" class="lazyload">
+                        <img data-src="https://d-sketon.top/img/backimg/bg19.jpg" data-sizes="auto" alt="Java Stream流" class="lazyload">
                     
                 
                 <a href="/20210922/java-stream/"></a>
                 <div class="article-nav-caption">后一篇</div>
-                <div class="article-nav-title">
+                <h3 class="article-nav-title">
                     
                         Java Stream流
                     
-                </div>
+                </h3>
             </div>
         
     </nav>
+
 
     
 </article>
@@ -430,6 +484,16 @@
     <section id="comments" class="vcomment">
 
     </section>
+
+
+
+
+
+
+
+
+
+
 </section>
                 
                     <aside id="sidebar">
@@ -507,6 +571,7 @@
         </div>
     </div>
 
+
     
         
     <div class="widget-wrap">
@@ -519,10 +584,11 @@
 
     
 </aside>
+
                 
             </div>
             <footer id="footer">
-    <div class="footer-line"></div>
+    <div style="width: 100%; overflow: hidden"><div class="footer-line"></div></div>
     <div class="outer">
         <div id="footer-info" class="inner">
             
@@ -559,7 +625,7 @@
         </div>
     </div>
 </footer>
-  
+
         </div>
         <nav id="mobile-nav">
     <div class="sidebar-wrap">
@@ -618,6 +684,7 @@
         </div>
     </div>
 </nav>
+
         
 <script src="https://unpkg.com/jquery@3.7.0/dist/jquery.min.js"></script>
 
@@ -654,7 +721,7 @@
 <script src="/js/script.js"></script>
 
 
-    
+
 
 
     
@@ -680,6 +747,14 @@
             highlight: highlight
         });
     </script>
+
+
+
+
+
+
+
+
 
 
 
@@ -710,6 +785,7 @@
             }
         };
     </script>
+
 
     </div>
     <div class="site-search">

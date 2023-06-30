@@ -6,11 +6,31 @@
     <head>
     <meta charset="utf-8">
     
+
+    
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?55ca897d064d6eb98df32d62c6984cc0";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
     
     <title>
         
         拔剑Sketon</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CUbuntu%20Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+    
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free/css/v4-font-face.min.css">
+
+    
+<link rel="stylesheet" href="/css/loader.css">
+
     <meta name="description" content="D-Sketon&#39;s blog">
 <meta property="og:type" content="website">
 <meta property="og:title" content="拔剑Sketon">
@@ -24,11 +44,11 @@
         <link rel="alternate" href="/atom.xml" title="拔剑Sketon" type="application/atom+xml">
     
     
-        <link rel="shortcut icon" href="/css/images/favicon.ico">
+        <link rel="shortcut icon" href="/images/favicon.ico">
     
     
         
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@latest/index.min.css">
+<link rel="stylesheet" href="https://unpkg.com/typeface-source-code-pro@1.1.13/index.css">
 
     
     
@@ -45,27 +65,55 @@
 
     
     
+    
+    
 <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js"></script>
 
 <meta name="generator" content="Hexo 6.3.0"></head>
-  
+
     <body>
+    
+<div id='loader'>
+  <div class="loading-left-bg"></div>
+  <div class="loading-right-bg"></div>
+  <div class="spinner-box">
+    <div class="loading-taichi">
+      <svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+      <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="#ff6e6b" />
+      <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z" fill="#fd0d00" />
+      <path d="M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95" fill="#fd0d00" />
+    </svg>
+    </div>
+    <div class="loading-word">少女祈祷中...</div>
+  </div>
+</div>
+</div>
+
+<script>
+  const endLoading = function() {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loader').classList.add("loading");
+  }
+  window.addEventListener('load', endLoading);
+</script>
+
+
     <div id="container">
         <div id="wrap">
             <header id="header">
     
-        <img data-src="/css/images/banner.jpg" data-sizes="auto" alt="" class="lazyload">
+        <img data-src="/images/banner.jpg" data-sizes="auto" alt="" class="lazyload">
     
     <div id="header-outer" class="outer">
         <div id="header-title" class="inner">
-            <h1 id="logo-wrap">
+            <div id="logo-wrap">
                 
                     
                     
-                        <a href="/" id="logo">拔剑Sketon</a>
+                        <a href="/" id="logo"><h1>拔剑Sketon</h1></a>
                     
                 
-            </h1>
+            </div>
             
                 
                 
@@ -116,7 +164,7 @@
         </div>
     </div>
 </header>
-  
+
             <div id="content" class="outer">
                 <section id="main">
     
@@ -130,7 +178,7 @@
             
                 
                 
-                    <img data-src="https://d-sketon.top/img/backimg/bg11.jpg" data-sizes="auto" alt="《大家的日语》文法整理" class="lazyload">
+                    <img data-src="https://d-sketon.top/img/backimg/bg26.jpeg" data-sizes="auto" alt="《大家的日语》文法整理" class="lazyload">
                 
             
 
@@ -145,7 +193,7 @@
                     <a><span class="icon-clock"></span>8 分钟</a>
                 
             </div>
-            <div class="post-title">《大家的日语》文法整理</div>
+            <h2 class="post-title">《大家的日语》文法整理</h2>
             <article class="post-article">
                 
                     <p>本笔记仅整理来自于《大家的日语》（みませんの日本語）1-22课内的文法部分，可能会有疏漏的部分，敬请谅解</p>
@@ -153,6 +201,7 @@
             </article>
         </div>
     </div>
+
 
     
         
@@ -164,7 +213,7 @@
             
                 
                 
-                    <img data-src="https://d-sketon.top/img/backimg/bg26.jpeg" data-sizes="auto" alt="不同版本Java对于Minecraft服务端spigot端的性能影响" class="lazyload">
+                    <img data-src="https://d-sketon.top/img/backimg/bg7.jpg" data-sizes="auto" alt="不同版本Java对于Minecraft服务端spigot端的性能影响" class="lazyload">
                 
             
         </div>
@@ -178,7 +227,7 @@
                     <a><span class="icon-clock"></span>37 分钟</a>
                 
             </div>
-            <div class="post-title">不同版本Java对于Minecraft服务端spigot端的性能影响</div>
+            <h2 class="post-title">不同版本Java对于Minecraft服务端spigot端的性能影响</h2>
             <article class="post-article">
                 
                     测试Java8和Java11下Hotspot和Openj9虚拟机对于Minecraft服务端spigot端的性能影响
@@ -186,6 +235,7 @@
             </article>
         </div>
     </div>
+
 
     
         
@@ -198,7 +248,7 @@
             
                 
                 
-                    <img data-src="https://d-sketon.top/img/backimg/bg21.jpg" data-sizes="auto" alt="Ubuntu下安装spigot搭建Minecraft服务器" class="lazyload">
+                    <img data-src="https://d-sketon.top/img/backimg/bg15.jpg" data-sizes="auto" alt="Ubuntu下安装spigot搭建Minecraft服务器" class="lazyload">
                 
             
 
@@ -213,7 +263,7 @@
                     <a><span class="icon-clock"></span>6 分钟</a>
                 
             </div>
-            <div class="post-title">Ubuntu下安装spigot搭建Minecraft服务器</div>
+            <h2 class="post-title">Ubuntu下安装spigot搭建Minecraft服务器</h2>
             <article class="post-article">
                 
                     Ubuntu下安装spigot搭建Minecraft1.16.5服务器，从java的安装,git的安装,spigot的的构建到服务器的上线
@@ -221,6 +271,7 @@
             </article>
         </div>
     </div>
+
 
     
         
@@ -246,7 +297,7 @@
                     <a><span class="icon-clock"></span>14 分钟</a>
                 
             </div>
-            <div class="post-title">CSAPP - BombLab</div>
+            <h2 class="post-title">CSAPP - BombLab</h2>
             <article class="post-article">
                 
                     深入理解计算机系统（CSAPP）中BombLab的实验详解。
@@ -254,6 +305,7 @@
             </article>
         </div>
     </div>
+
 
     
         
@@ -266,7 +318,7 @@
             
                 
                 
-                    <img data-src="https://d-sketon.top/img/backimg/bg16.jpg" data-sizes="auto" alt="CSAPP - MallocLab" class="lazyload">
+                    <img data-src="https://d-sketon.top/img/backimg/bg10.jpg" data-sizes="auto" alt="CSAPP - MallocLab" class="lazyload">
                 
             
 
@@ -281,7 +333,7 @@
                     <a><span class="icon-clock"></span>17 分钟</a>
                 
             </div>
-            <div class="post-title">CSAPP - MallocLab</div>
+            <h2 class="post-title">CSAPP - MallocLab</h2>
             <article class="post-article">
                 
                     深入理解计算机系统（CSAPP）中MallocLab的实验详解。
@@ -289,6 +341,7 @@
             </article>
         </div>
     </div>
+
 
     
         
@@ -300,7 +353,7 @@
             
                 
                 
-                    <img data-src="https://d-sketon.top/img/backimg/bg22.jpg" data-sizes="auto" alt="CSAPP - AttackLab" class="lazyload">
+                    <img data-src="https://d-sketon.top/img/backimg/bg28.jpg" data-sizes="auto" alt="CSAPP - AttackLab" class="lazyload">
                 
             
         </div>
@@ -314,7 +367,7 @@
                     <a><span class="icon-clock"></span>11 分钟</a>
                 
             </div>
-            <div class="post-title">CSAPP - AttackLab</div>
+            <h2 class="post-title">CSAPP - AttackLab</h2>
             <article class="post-article">
                 
                     深入理解计算机系统（CSAPP）中Attacklab的实验详解。实验分为5个阶段，通过缓冲区溢出和ROP两种攻击方式进行攻击。
@@ -322,6 +375,7 @@
             </article>
         </div>
     </div>
+
 
     
         
@@ -349,7 +403,7 @@
                     <a><span class="icon-clock"></span>3 分钟</a>
                 
             </div>
-            <div class="post-title">修复leancloud无法显示阅读次数</div>
+            <h2 class="post-title">修复leancloud无法显示阅读次数</h2>
             <article class="post-article">
                 
                     本人近期打算修复一下一直无法使用的博客阅读次数
@@ -357,6 +411,7 @@
             </article>
         </div>
     </div>
+
 
     
         
@@ -368,7 +423,7 @@
             
                 
                 
-                    <img data-src="https://d-sketon.top/img/backimg/bg22.jpg" data-sizes="auto" alt="百度地图API GL使用总结" class="lazyload">
+                    <img data-src="https://d-sketon.top/img/backimg/bg16.jpg" data-sizes="auto" alt="百度地图API GL使用总结" class="lazyload">
                 
             
         </div>
@@ -382,7 +437,7 @@
                     <a><span class="icon-clock"></span>6 分钟</a>
                 
             </div>
-            <div class="post-title">百度地图API GL使用总结</div>
+            <h2 class="post-title">百度地图API GL使用总结</h2>
             <article class="post-article">
                 
                     <p>J2EE项目总结</p>
@@ -390,6 +445,7 @@
             </article>
         </div>
     </div>
+
 
     
         
@@ -402,7 +458,7 @@
             
                 
                 
-                    <img data-src="https://d-sketon.top/img/backimg/bg25.jpg" data-sizes="auto" alt="计算机网络-物理层 学习笔记" class="lazyload">
+                    <img data-src="https://d-sketon.top/img/backimg/bg20.jpg" data-sizes="auto" alt="计算机网络-物理层 学习笔记" class="lazyload">
                 
             
 
@@ -417,7 +473,7 @@
                     <a><span class="icon-clock"></span>9 分钟</a>
                 
             </div>
-            <div class="post-title">计算机网络-物理层 学习笔记</div>
+            <h2 class="post-title">计算机网络-物理层 学习笔记</h2>
             <article class="post-article">
                 
                     计算机网络-数据链路层 学习笔记
@@ -425,6 +481,7 @@
             </article>
         </div>
     </div>
+
 
     
         
@@ -436,7 +493,7 @@
             
                 
                 
-                    <img data-src="https://d-sketon.top/img/backimg/bg16.jpg" data-sizes="auto" alt="计算机网络-数据链路层 学习笔记" class="lazyload">
+                    <img data-src="https://d-sketon.top/img/backimg/bg12.jpg" data-sizes="auto" alt="计算机网络-数据链路层 学习笔记" class="lazyload">
                 
             
         </div>
@@ -450,7 +507,7 @@
                     <a><span class="icon-clock"></span>11 分钟</a>
                 
             </div>
-            <div class="post-title">计算机网络-数据链路层 学习笔记</div>
+            <h2 class="post-title">计算机网络-数据链路层 学习笔记</h2>
             <article class="post-article">
                 
                     计算机网络-数据链路层 学习笔记
@@ -459,6 +516,7 @@
         </div>
     </div>
 
+
     
 
 
@@ -466,6 +524,8 @@
         
         <a class="extend prev" rel="prev" href="/">&laquo; 上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/3/">下一页 &raquo;</a>
     </nav>
+
+
 </section>
                 
                     <aside id="sidebar">
@@ -543,6 +603,7 @@
         </div>
     </div>
 
+
     
         
     <div class="widget-wrap">
@@ -555,10 +616,11 @@
 
     
 </aside>
+
                 
             </div>
             <footer id="footer">
-    <div class="footer-line"></div>
+    <div style="width: 100%; overflow: hidden"><div class="footer-line"></div></div>
     <div class="outer">
         <div id="footer-info" class="inner">
             
@@ -595,7 +657,7 @@
         </div>
     </div>
 </footer>
-  
+
         </div>
         <nav id="mobile-nav">
     <div class="sidebar-wrap">
@@ -654,6 +716,7 @@
         </div>
     </div>
 </nav>
+
         
 <script src="https://unpkg.com/jquery@3.7.0/dist/jquery.min.js"></script>
 
@@ -690,7 +753,7 @@
 <script src="/js/script.js"></script>
 
 
-    
+
 
 
     
@@ -716,6 +779,14 @@
             highlight: highlight
         });
     </script>
+
+
+
+
+
+
+
+
 
 
 
@@ -746,6 +817,7 @@
             }
         };
     </script>
+
 
     </div>
     <div class="site-search">

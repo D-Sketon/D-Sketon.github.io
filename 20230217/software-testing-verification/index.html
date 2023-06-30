@@ -12,12 +12,32 @@
 <!-- hexo injector head_begin end -->
     <meta charset="utf-8">
     
+
+    
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?55ca897d064d6eb98df32d62c6984cc0";
+          var s = document.getElementsByTagName("script")[0]; 
+          s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+
     
     <title>
         软件测试与验证 学习笔记 |
         
         拔剑Sketon</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CUbuntu%20Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+    
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free/css/v4-font-face.min.css">
+
+    
+<link rel="stylesheet" href="/css/loader.css">
+
     <meta name="description" content="软件测试基础  什么是软件测试 软件测试是贯穿整个软件开发生命周期，对软件产品进行验证和确认的活动过程，也是对软件产品质量持续的评估过程，其目的是尽快尽早地发现软件产品中存在的各种缺陷，尽最大可能揭示软件开发过程中所存在的产品质量风险，实现缺陷预防  静态测试：不执行被测对象 动态测试：执行被测对象   充分性问题  由于无法穷举被测软件完整的输入空间，各种软件动态测试方法本质上都是围绕 “如何">
 <meta property="og:type" content="article">
 <meta property="og:title" content="软件测试与验证 学习笔记">
@@ -34,11 +54,11 @@
         <link rel="alternate" href="/atom.xml" title="拔剑Sketon" type="application/atom+xml">
     
     
-        <link rel="shortcut icon" href="/css/images/favicon.ico">
+        <link rel="shortcut icon" href="/images/favicon.ico">
     
     
         
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@latest/index.min.css">
+<link rel="stylesheet" href="https://unpkg.com/typeface-source-code-pro@1.1.13/index.css">
 
     
     
@@ -55,27 +75,55 @@
 
     
     
+    
+    
 <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js"></script>
 
 <meta name="generator" content="Hexo 6.3.0"></head>
-  
+
     <body>
+    
+<div id='loader'>
+  <div class="loading-left-bg"></div>
+  <div class="loading-right-bg"></div>
+  <div class="spinner-box">
+    <div class="loading-taichi">
+      <svg width="150" height="150" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
+      <path d="M303.5 432A80 80 0 0 1 291.5 592A80 80 0 0 1 303.5 432z" fill="#ff6e6b" />
+      <path d="M512 65A447 447 0 0 1 512 959L512 929A417 417 0 0 0 512 95A417 417 0 0 0 512 929L512 959A447 447 0 0 1 512 65z" fill="#fd0d00" />
+      <path d="M512 95A417 417 0 0 1 929 512A208.5 208.5 0 0 1 720.5 720.5L720.5 592A80 80 0 0 0 720.5 432A80 80 0 0 0 720.5 592L720.5 720.5A208.5 208.5 0 0 1 512 512A208.5 208.5 0 0 0 303.5 303.5A208.5 208.5 0 0 0 95 512A417 417 0 0 1 512 95" fill="#fd0d00" />
+    </svg>
+    </div>
+    <div class="loading-word">少女祈祷中...</div>
+  </div>
+</div>
+</div>
+
+<script>
+  const endLoading = function() {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loader').classList.add("loading");
+  }
+  window.addEventListener('load', endLoading);
+</script>
+
+
     <div id="container">
         <div id="wrap">
             <header id="header">
     
-        <img data-src="/css/images/banner.jpg" data-sizes="auto" alt="软件测试与验证 学习笔记" class="lazyload">
+        <img data-src="/images/banner.jpg" data-sizes="auto" alt="软件测试与验证 学习笔记" class="lazyload">
     
     <div id="header-outer" class="outer">
         <div id="header-title" class="inner">
-            <h1 id="logo-wrap">
+            <div id="logo-wrap">
                 
                     
                     
-                        <a href="/" id="logo">软件测试与验证 学习笔记</a>
+                        <a href="/" id="logo"><h1>软件测试与验证 学习笔记</h1></a>
                     
                 
-            </h1>
+            </div>
             
                 
                 
@@ -122,7 +170,7 @@
         </div>
     </div>
 </header>
-  
+
             <div id="content" class="outer">
                 <section id="main"><article id="post-软件测试与验证 学习笔记" class="h-entry article article-type-post"
          itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
@@ -140,9 +188,11 @@
         <a class="article-category-link" href="/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/">计软杂谈</a><a class="article-category-link" href="/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
     </div>
 
+
         </div>
         <div class="hr-line"></div>
         
+
         <div class="e-content article-entry" itemprop="articleBody">
             
                 <h2 id="软件测试基础"><a class="markdownIt-Anchor" href="#软件测试基础"></a> 软件测试基础</h2>
@@ -1000,7 +1050,7 @@
             
         </div>
         <footer class="article-footer">
-            <a data-url="https://d-sketon.github.io/20230217/software-testing-verification/" data-id="cliioj3400041w4vrff1fcxu5" data-title="软件测试与验证 学习笔记"
+            <a data-url="https://d-sketon.github.io/20230217/software-testing-verification/" data-id="cljimdkym00405cvrfujjgd4k" data-title="软件测试与验证 学习笔记"
                class="article-share-link">分享</a>
             
                 <a href="/20230217/software-testing-verification/#comments" class="article-comment-link">
@@ -1010,7 +1060,10 @@
                 </a>
             
             
+            
+            
     <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%B5%8B%E8%AF%95/" rel="tag">测试</a></li></ul>
+
 
         </footer>
     </div>
@@ -1023,19 +1076,20 @@
                 
                     
                     
-                        <img data-src="https://d-sketon.top/img/backimg/bg19.jpg" data-sizes="auto" alt="并行程序设计 学习笔记" class="lazyload">
+                        <img data-src="https://d-sketon.top/img/backimg/bg18.jpg" data-sizes="auto" alt="并行程序设计 学习笔记" class="lazyload">
                     
                 
                 <a href="/20230128/parallel-programming-design/"></a>
                 <div class="article-nav-caption">后一篇</div>
-                <div class="article-nav-title">
+                <h3 class="article-nav-title">
                     
                         并行程序设计 学习笔记
                     
-                </div>
+                </h3>
             </div>
         
     </nav>
+
 
     
 </article>
@@ -1044,6 +1098,16 @@
     <section id="comments" class="vcomment">
 
     </section>
+
+
+
+
+
+
+
+
+
+
 </section>
                 
                     <aside id="sidebar">
@@ -1121,6 +1185,7 @@
         </div>
     </div>
 
+
     
         
     <div class="widget-wrap">
@@ -1133,10 +1198,11 @@
 
     
 </aside>
+
                 
             </div>
             <footer id="footer">
-    <div class="footer-line"></div>
+    <div style="width: 100%; overflow: hidden"><div class="footer-line"></div></div>
     <div class="outer">
         <div id="footer-info" class="inner">
             
@@ -1173,7 +1239,7 @@
         </div>
     </div>
 </footer>
-  
+
         </div>
         <nav id="mobile-nav">
     <div class="sidebar-wrap">
@@ -1232,6 +1298,7 @@
         </div>
     </div>
 </nav>
+
         
 <script src="https://unpkg.com/jquery@3.7.0/dist/jquery.min.js"></script>
 
@@ -1268,7 +1335,7 @@
 <script src="/js/script.js"></script>
 
 
-    
+
 
 
     
@@ -1294,6 +1361,14 @@
             highlight: highlight
         });
     </script>
+
+
+
+
+
+
+
+
 
 
 
@@ -1324,6 +1399,7 @@
             }
         };
     </script>
+
 
     </div>
     <div class="site-search">
