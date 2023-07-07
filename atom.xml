@@ -6,7 +6,7 @@
   <link href="https://d-sketon.github.io/atom.xml" rel="self"/>
   
   <link href="https://d-sketon.github.io/"/>
-  <updated>2023-06-04T15:34:45.111Z</updated>
+  <updated>2023-07-07T15:22:22.996Z</updated>
   <id>https://d-sketon.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo-theme-reimu食用指南</title>
+    <link href="https://d-sketon.github.io/20230707/hexo-theme-reimu-guide/"/>
+    <id>https://d-sketon.github.io/20230707/hexo-theme-reimu-guide/</id>
+    <published>2023-07-07T15:02:43.000Z</published>
+    <updated>2023-07-07T15:22:22.996Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;&lt;code&gt;hexo-theme-reimu&lt;/code&gt; 是一款博丽灵梦风格的Hexo主题，其融合了&lt;a href=&quot;https://github.com/hexojs/hexo-theme-landscape&quot;&gt;landscape&lt;/a&gt;、&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="hexo" scheme="https://d-sketon.github.io/categories/hexo/"/>
+    
+    
+    <category term="hexo" scheme="https://d-sketon.github.io/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>软件测试与验证 学习笔记</title>
@@ -409,27 +434,6 @@
     
     
     <category term="计算机网络" scheme="https://d-sketon.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSAPP - CacheLab</title>
-    <link href="https://d-sketon.github.io/20211015/csapp-cachelab/"/>
-    <id>https://d-sketon.github.io/20211015/csapp-cachelab/</id>
-    <published>2021-10-15T15:29:08.000Z</published>
-    <updated>2023-01-17T04:43:43.773Z</updated>
-    
-    
-    <summary type="html">深入理解计算机系统（CSAPP）中CacheLab的实验详解。实验要求实现一个cache模拟器，并优化转置矩阵的代码，使其未命中率尽可能低。</summary>
-    
-    
-    
-    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
-    
-    
-    <category term="CSAPP" scheme="https://d-sketon.github.io/tags/CSAPP/"/>
-    
-    <category term="深入理解计算机系统" scheme="https://d-sketon.github.io/tags/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
