@@ -6,7 +6,7 @@
   <link href="https://d-sketon.github.io/atom.xml" rel="self"/>
   
   <link href="https://d-sketon.github.io/"/>
-  <updated>2023-09-09T08:29:21.608Z</updated>
+  <updated>2023-11-11T06:42:30.087Z</updated>
   <id>https://d-sketon.github.io/</id>
   
   <author>
@@ -17,11 +17,67 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hexo 7 迁移指南</title>
+    <link href="https://d-sketon.github.io/20231111/hexo-7-migration-guide/"/>
+    <id>https://d-sketon.github.io/20231111/hexo-7-migration-guide/</id>
+    <published>2023-11-11T05:46:28.000Z</published>
+    <updated>2023-11-11T06:42:30.087Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Hexo 7 以正式发布，强烈建议大家向高版本进行迁移以获得更好的体验。&lt;br /&gt;
+本文针对于 v6 向 v7 迁移的用户。&lt;/p&gt;
+&lt;h2 id=&quot;针对使用者&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#针对使用者&quot;&gt;&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="hexo" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://d-sketon.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo 5/6/7 生成文章性能对比</title>
+    <link href="https://d-sketon.github.io/20231111/hexo-generate-benchmark/"/>
+    <id>https://d-sketon.github.io/20231111/hexo-generate-benchmark/</id>
+    <published>2023-11-11T04:36:54.000Z</published>
+    <updated>2023-11-11T05:45:08.416Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;最近 Hexo 7 正式发布了，在这一版本中针对生成性能做了一定程度的优化（&lt;a href=&quot;https://github.com/hexojs/hexo/pull/5119&quot;&gt;#5119&lt;/a&gt;、&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="hexo" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://d-sketon.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
     <title>hexo-theme-reimu食用指南</title>
     <link href="https://d-sketon.github.io/20230707/hexo-theme-reimu-guide/"/>
     <id>https://d-sketon.github.io/20230707/hexo-theme-reimu-guide/</id>
     <published>2023-07-07T15:02:43.000Z</published>
-    <updated>2023-09-09T08:29:21.608Z</updated>
+    <updated>2023-11-11T05:40:00.124Z</updated>
     
     
       
@@ -34,10 +90,12 @@
     
     
     
-    <category term="hexo" scheme="https://d-sketon.github.io/categories/hexo/"/>
+    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="hexo" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/hexo/"/>
     
     
-    <category term="hexo" scheme="https://d-sketon.github.io/tags/hexo/"/>
+    <category term="Hexo" scheme="https://d-sketon.github.io/tags/Hexo/"/>
     
   </entry>
   
@@ -158,7 +216,7 @@
     <link href="https://d-sketon.github.io/20220912/hexo-source1/"/>
     <id>https://d-sketon.github.io/20220912/hexo-source1/</id>
     <published>2022-09-12T09:32:50.000Z</published>
-    <updated>2023-01-17T04:43:36.639Z</updated>
+    <updated>2023-11-11T05:39:56.363Z</updated>
     
     
     <summary type="html">最近看到了Hexo的issue &#92;#4976，其中提到了大文件的CSS在生成的过程中可能会丢失部分代码。本人感觉这个问题非常有意思，于是自己也尝试了一下大文件的CSS，没想到也成功复现了这个问题。</summary>
@@ -166,6 +224,8 @@
     
     
     <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="hexo" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/hexo/"/>
     
     
     <category term="Hexo" scheme="https://d-sketon.github.io/tags/Hexo/"/>
@@ -257,7 +317,7 @@
     <link href="https://d-sketon.github.io/20220702/minecraft-server-comparison/"/>
     <id>https://d-sketon.github.io/20220702/minecraft-server-comparison/</id>
     <published>2022-07-02T02:48:31.000Z</published>
-    <updated>2023-01-17T03:31:15.057Z</updated>
+    <updated>2023-11-11T05:34:34.144Z</updated>
     
     
     <summary type="html">测试Java8和Java11下Hotspot和Openj9虚拟机对于Minecraft服务端spigot端的性能影响</summary>
@@ -392,48 +452,6 @@
     
     
     <category term="前端" scheme="https://d-sketon.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>计算机网络-物理层 学习笔记</title>
-    <link href="https://d-sketon.github.io/20211024/physical-layer/"/>
-    <id>https://d-sketon.github.io/20211024/physical-layer/</id>
-    <published>2021-10-24T12:36:59.000Z</published>
-    <updated>2023-01-28T05:33:58.215Z</updated>
-    
-    
-    <summary type="html">计算机网络-数据链路层 学习笔记</summary>
-    
-    
-    
-    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
-    
-    <category term="学习笔记" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="计算机网络" scheme="https://d-sketon.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>计算机网络-数据链路层 学习笔记</title>
-    <link href="https://d-sketon.github.io/20211023/data-link-layer/"/>
-    <id>https://d-sketon.github.io/20211023/data-link-layer/</id>
-    <published>2021-10-23T15:50:21.000Z</published>
-    <updated>2023-01-28T05:33:55.975Z</updated>
-    
-    
-    <summary type="html">计算机网络-数据链路层 学习笔记</summary>
-    
-    
-    
-    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
-    
-    <category term="学习笔记" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="计算机网络" scheme="https://d-sketon.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
   </entry>
   
