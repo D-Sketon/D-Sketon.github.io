@@ -33,28 +33,28 @@ const getRealPath = (pathname, desc = false) => {
       window.localStorage.setItem('dark_mode', 'true')
     }
   } else {
-    if(mode == 'true') {
+    if (mode == 'true') {
       document.documentElement.setAttribute('data-theme', 'dark')
     } else if (mode == 'false') {
       document.documentElement.removeAttribute('data-theme')
     }
   }
   mode = window.localStorage.getItem('dark_mode')
-  if(mode == 'true') {
+  if (mode == 'true') {
     $('#sub-nav').append('<a id="nav-sun-btn" class="nav-icon dark-mode-btn"></a>')
   } else if (mode == 'false') {
     $('#sub-nav').append('<a id="nav-moon-btn" class="nav-icon dark-mode-btn"></a>')
   }
   $('.dark-mode-btn').on('click', function () {
     const id = $(this).attr('id')
-    if(id == 'nav-sun-btn') { 
+    if (id == 'nav-sun-btn') {
       window.localStorage.setItem('dark_mode', 'false')
       document.documentElement.removeAttribute('data-theme')
-      $(this).attr("id","nav-moon-btn")
+      $(this).attr("id", "nav-moon-btn")
     } else {
       window.localStorage.setItem('dark_mode', 'true')
       document.documentElement.setAttribute('data-theme', 'dark')
-      $(this).attr("id","nav-sun-btn")
+      $(this).attr("id", "nav-sun-btn")
     }
   })
   // Share
@@ -139,7 +139,7 @@ const getRealPath = (pathname, desc = false) => {
   // Mobile nav
   const $container = $('#container');
   let isMobileNavAnim = false;
-  let mobileNavAnimDuration = 200;
+  const mobileNavAnimDuration = 200;
 
   const startMobileNavAnim = function () {
     isMobileNavAnim = true;
@@ -158,10 +158,8 @@ const getRealPath = (pathname, desc = false) => {
     $container.toggleClass('mobile-nav-on');
     stopMobileNavAnim();
   });
-
-  $('#wrap').on('click', function () {
+  $('#mask').on('click', function () {
     if (isMobileNavAnim || !$container.hasClass('mobile-nav-on')) return;
-
     $container.removeClass('mobile-nav-on');
   });
 
@@ -174,13 +172,34 @@ const getRealPath = (pathname, desc = false) => {
     }
   }
 
-   // lazysizes
-   const imgs = $('.article-entry img');
-   imgs.each(function() {
-     const src = $(this).attr('src');
-     $(this).addClass('lazyload');
-     $(this).removeAttr('src');
-     $(this).attr('data-src', src);
-     $(this).attr('data-sizes','auto');
-   })
+  // lazysizes
+  const imgs = $('.article-entry img');
+  imgs.each(function () {
+    const src = $(this).attr('src');
+    $(this).addClass('lazyload');
+    $(this).removeAttr('src');
+    $(this).attr('data-src', src);
+    $(this).attr('data-sizes', 'auto');
+  })
+
+  // to top
+  $('.sidebar-top').on('click', function () {
+    $('html,body').animate({ scrollTop: 0 }, 500);
+  });
+  if (document.documentElement.scrollTop < 10) {
+    $('.sidebar-top').fadeOut();
+  }
+  $(window).on('scroll', function () {
+    if (document.documentElement.scrollTop < 10) {
+      $('.sidebar-top').fadeOut();
+    } else {
+      $('.sidebar-top').fadeIn();
+    }
+  });
+
+  // toc
+  $('.toc a').on('click', function () {
+    if (isMobileNavAnim || !$container.hasClass('mobile-nav-on')) return;
+    $container.removeClass('mobile-nav-on');
+  })
 })(jQuery);

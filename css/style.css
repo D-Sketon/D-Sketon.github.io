@@ -38,9 +38,9 @@
   --red-1: #ff5252;
   --red-2: #ff7c7c;
   --red-3: #ffafaf;
-  --red-4: #ffd0d0;
-  --red-5: #ffe4e4;
-  --red-5-5: #ffecec;
+  --red-4: rgba(255,208,208,0.5);
+  --red-5: rgba(255,228,228,0.2);
+  --red-5-5: rgba(255,236,236,0.1);
   --red-6: #fff3f3;
   --color-default-font: #999;
   --color-default: #999;
@@ -49,7 +49,7 @@
   --color-link: var(--red-1);
   --color-dark-link: #ff0f0f;
   --color-background: #21252b;
-  --color-code-background: #e8e8e8;
+  --color-code-background: rgba(232,232,232,0.2);
   --color-sidebar-text: #777;
   --color-header-background: #222;
   --color-footer-background: #21252b;
@@ -63,8 +63,8 @@
   --color-dark-facebook: #2f477a;
   --color-dark-pinterest: #a21a1f;
   --color-dark-linkedin: #005f91;
-  --color-meta-shadow: rgba(0,0,0,0.3);
-  --color-hover-shadow: rgba(0,0,0,0.3);
+  --color-meta-shadow: rgba(0,0,0,0.2);
+  --color-hover-shadow: rgba(0,0,0,0.2);
   --color-h2-after: #ff5252;
   --color-h2-after-shadow: rgba(255,78,106,0.7);
 }
@@ -175,12 +175,13 @@ body:after {
 .article-entry h4:before,
 .article-entry h5:before,
 .article-entry h6:before {
-  font-family: FontAwesome;
-  color: var(--color-grey);
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
+  color: var(--red-2);
   opacity: 0.5;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
   filter: alpha(opacity=50);
   content: "\f292";
+  margin-right: 10px;
 }
 .article-entry h1 {
   font-size: 2em;
@@ -478,11 +479,15 @@ body {
   z-index: 1;
   background: var(--color-background);
 }
-.mobile-nav-on #wrap {
-  left: 280px;
-}
 #main {
   padding: 0 5px;
+}
+#content {
+  position: relative;
+  padding-top: 5px;
+}
+#content.outer {
+  overflow: visible;
 }
 @media screen and (min-width: 960px) {
   #main {
@@ -492,6 +497,19 @@ body {
     width: 73.33333333333333%;
     margin: 0 0.833333333333333%;
   }
+}
+#mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  z-index: 1000;
+}
+.mobile-nav-on #mask {
+  display: block;
 }
 #header {
   height: 400px;
@@ -795,10 +813,10 @@ body {
   display: none;
 }
 #main-nav-toggle:before {
-  font-family: FontAwesome;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
   content: "\f0c9";
 }
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 959px) {
   #main-nav-toggle {
     display: block;
   }
@@ -819,20 +837,22 @@ body {
   margin-right: -15px;
 }
 #nav-rss-link:before {
-  font-family: FontAwesome;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
   content: "\f09e";
 }
 #nav-search-btn:before {
-  font-family: FontAwesome;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
   content: "\f002";
 }
 #nav-sun-btn:before {
-  font-family: FontAwesome;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
   content: "\f185";
+  font-weight: 900;
 }
 #nav-moon-btn:before {
-  font-family: FontAwesome;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
   content: "\f186";
+  font-weight: 900;
 }
 #search-form-wrap {
   position: absolute;
@@ -889,7 +909,7 @@ body {
   top: 50%;
   right: 10px;
   margin-top: -7px;
-  font: 13px FontAwesome;
+  font: 13px "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
   border: none;
   background: none;
   color: #bbb;
@@ -952,7 +972,6 @@ body {
   margin: 0 12px 1em;
   -webkit-box-shadow: 0 0 5px 3px var(--color-meta-shadow);
   box-shadow: 0 0 5px 3px var(--color-meta-shadow);
-  text-shadow: 0 1px #fff;
 }
 .article-date {
   display: -webkit-box;
@@ -969,7 +988,7 @@ body {
   align-items: center;
 }
 .article-date-link:before {
-  font-family: FontAwesome;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
   content: "\f017";
   margin-right: 10px;
 }
@@ -994,8 +1013,9 @@ body {
   align-items: center;
 }
 .article-category-link:before {
-  font-family: FontAwesome;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
   content: "\f02e";
+  font-weight: 900;
   margin-right: 10px;
 }
 .article-title {
@@ -1050,7 +1070,7 @@ a.article-title:hover {
 .article-entry h4:before,
 .article-entry h5:before,
 .article-entry h6:before {
-  font-family: FontAwesome;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
   font-weight: normal;
 }
 .article-entry h1,
@@ -1192,7 +1212,6 @@ a.article-title:hover {
   border-radius: 15px;
   background: var(--red-5);
   color: var(--red-1);
-  text-shadow: 0 1px #fff;
   text-decoration: none;
   -webkit-box-shadow: 0 0 5px 3px var(--red-6);
   box-shadow: 0 0 5px 3px var(--red-6);
@@ -1236,9 +1255,9 @@ a.article-title:hover {
   margin-right: 10px;
 }
 .article-tag-list-link:before {
-  font-family: FontAwesome;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
   margin-right: 10px;
-  content: "\f292";
+  content: "\f02b";
 }
 .article-comment-link {
   float: right;
@@ -1247,7 +1266,7 @@ a.article-title:hover {
   padding: 10px 18px;
 }
 .article-comment-link:before {
-  font-family: FontAwesome;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
   content: "\f075";
   margin-right: 10px;
 }
@@ -1261,7 +1280,7 @@ a.article-title:hover {
   padding: 10px 18px;
 }
 .article-share-link:before {
-  font-family: FontAwesome;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
   content: "\f064";
   margin-right: 10px;
 }
@@ -1458,14 +1477,13 @@ a.article-title:hover {
   float: left;
   position: relative;
   color: #999;
-  text-shadow: 0 1px #fff;
 }
 .article-share-twitter:before,
 .article-share-facebook:before,
 .article-share-pinterest:before,
 .article-share-linkedin:before {
   font-size: 20px;
-  font-family: FontAwesome;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
   width: 20px;
   height: 20px;
   position: absolute;
@@ -1482,7 +1500,7 @@ a.article-title:hover {
   color: #fff;
 }
 .article-share-twitter:before {
-  font-family: FontAwesome;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
   content: "\f099";
 }
 .article-share-twitter:hover {
@@ -1490,7 +1508,7 @@ a.article-title:hover {
   text-shadow: 0 1px var(--color-dark-twitter);
 }
 .article-share-facebook:before {
-  font-family: FontAwesome;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
   content: "\f09a";
 }
 .article-share-facebook:hover {
@@ -1498,7 +1516,7 @@ a.article-title:hover {
   text-shadow: 0 1px var(--color-dark-facebook);
 }
 .article-share-pinterest:before {
-  font-family: FontAwesome;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
   content: "\f0d2";
 }
 .article-share-pinterest:hover {
@@ -1506,7 +1524,7 @@ a.article-title:hover {
   text-shadow: 0 1px var(--color-dark-pinterest);
 }
 .article-share-linkedin:before {
-  font-family: FontAwesome;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
   content: "\f0e1";
 }
 .article-share-linkedin:hover {
@@ -1582,11 +1600,11 @@ a.article-title:hover {
     -o-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    -webkit-transform: rotate(1deg);
-    -moz-transform: rotate(1deg);
-    -o-transform: rotate(1deg);
-    -ms-transform: rotate(1deg);
-    transform: rotate(1deg);
+    -webkit-transform: scale(1.015);
+    -moz-transform: scale(1.015);
+    -o-transform: scale(1.015);
+    -ms-transform: scale(1.015);
+    transform: scale(1.015);
   }
   .post-wrap-left:hover:before,
   .post-wrap-right:hover:before {
@@ -1598,17 +1616,6 @@ a.article-title:hover {
     opacity: 0.8;
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
     filter: alpha(opacity=80);
-  }
-  .post-wrap-left:hover .post-sticky,
-  .post-wrap-right:hover .post-sticky {
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
   }
   .post-wrap-left:hover img,
   .post-wrap-right:hover img {
@@ -1723,16 +1730,16 @@ a.article-title:hover {
   margin: 0 10px;
 }
 .post-meta .icon-calendar:before {
-  font-family: FontAwesome;
-  content: "\f271";
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
+  content: "\f073";
 }
 .post-meta .icon-pencil:before {
-  font-family: FontAwesome;
-  content: "\f040";
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
+  content: "\f5ad";
 }
 .post-meta .icon-clock:before {
-  font-family: FontAwesome;
-  content: "\f017";
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
+  content: "\f252";
 }
 .post-article {
   width: 100%;
@@ -1874,7 +1881,7 @@ a.article-title:hover {
   transition: all 0.3s;
 }
 .post-sticky:before {
-  font-family: FontAwesome;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
   content: "\f087";
   margin-right: 5px;
 }
@@ -2175,9 +2182,9 @@ a.article-title:hover {
   font-size: 12px;
 }
 .tag-wrap .archives-tag-list-link:before {
-  font-family: FontAwesome;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
   margin-right: 10px;
-  content: "\f292";
+  content: "\f02b";
 }
 .category-wrap {
   display: -webkit-box;
@@ -2210,8 +2217,9 @@ a.article-title:hover {
   font-size: 14px;
 }
 .category-wrap .archives-category-list-link:before {
-  font-family: FontAwesome;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
   margin-right: 10px;
+  font-weight: 900;
   content: "\f02e";
 }
 #footer {
@@ -2312,35 +2320,35 @@ a.article-title:hover {
   justify-content: center;
 }
 .icon-copyright:before {
-  font-family: FontAwesome;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
   content: "\f1f9";
 }
 .icon-brush {
   margin: 0 5px;
 }
 .icon-brush:before {
-  font-family: FontAwesome;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
   content: "\f1fc";
 }
 .icon-coffee {
   margin: 0 5px;
 }
 .icon-coffee:before {
-  font-family: FontAwesome;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
   content: "\f0f4";
 }
 .icon-eye {
   margin: 0 5px;
 }
 .icon-eye:before {
-  font-family: FontAwesome;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
   content: "\f06e";
 }
 .icon-user {
   margin: 0 5px;
 }
 .icon-user:before {
-  font-family: FontAwesome;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
   content: "\f007";
 }
 .footer-info-sep {
@@ -2432,20 +2440,28 @@ a.article-title:hover {
     transform: translateX(-100px);
   }
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 960px) {
   #mobile-nav {
     display: none;
   }
 }
-@media screen and (max-width: 479px) {
+@media screen and (max-width: 959px) {
   #mobile-nav {
     position: absolute;
     top: 0;
-    left: 0;
+    left: -280px;
     width: 280px;
     height: 100%;
     background: var(--color-mobile-nav-background);
-    border-right: 1px solid #fff;
+    z-index: 1001;
+    -webkit-transition: left 0.2s ease-out;
+    -moz-transition: left 0.2s ease-out;
+    -o-transition: left 0.2s ease-out;
+    -ms-transition: left 0.2s ease-out;
+    transition: left 0.2s ease-out;
+  }
+  .mobile-nav-on #mobile-nav {
+    left: 0;
   }
 }
 .article-entry pre,
@@ -2652,11 +2668,11 @@ pre .javascript .function {
   color: #dcbdfb;
 }
 .icon-copy:before {
-  font-family: FontAwesome;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
   content: "\f0c5";
 }
 .icon-chevron-down:before {
-  font-family: FontAwesome;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
   content: "\f078";
 }
 .code-area {
@@ -2793,6 +2809,11 @@ pre .javascript .function {
   -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -webkit-transform: scale(1.015);
+  -moz-transform: scale(1.015);
+  -o-transform: scale(1.015);
+  -ms-transform: scale(1.015);
+  transform: scale(1.015);
   -webkit-box-shadow: 0 0 10px 3px var(--color-hover-shadow);
   box-shadow: 0 0 10px 3px var(--color-hover-shadow);
 }
@@ -2825,11 +2846,6 @@ pre .javascript .function {
 }
 .widget a:hover,
 .widget span:hover {
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  transition: all 0.3s ease;
   opacity: 1;
   -ms-filter: none;
   filter: none;
@@ -2916,6 +2932,20 @@ pre .javascript .function {
   display: box;
   display: flex;
   margin: 1%;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.friend-item-wrap:hover {
+  -webkit-transform: scale(1.015);
+  -moz-transform: scale(1.015);
+  -o-transform: scale(1.015);
+  -ms-transform: scale(1.015);
+  transform: scale(1.015);
+  -webkit-box-shadow: 0 0 10px 3px rgba(255,0,0,0.1);
+  box-shadow: 0 0 10px 3px rgba(255,0,0,0.1);
 }
 @media screen and (max-width: 767px) {
   .friend-item-wrap {
@@ -3050,7 +3080,7 @@ pre .javascript .function {
   top: 10px;
 }
 .algolia-popup .popup-btn-close:before {
-  font-family: FontAwesome;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
   content: "\f057";
 }
 .algolia-search {
@@ -3067,7 +3097,7 @@ pre .javascript .function {
   font-size: 18px;
 }
 .algolia-search-input-icon:before {
-  font-family: FontAwesome;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
   content: "\f002";
 }
 .algolia-search-input {
@@ -3198,11 +3228,11 @@ pre .javascript .function {
   display: none;
 }
 .ais-pagination--item__previous a:before {
-  font-family: FontAwesome;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
   content: "\f104";
 }
 .ais-pagination--item__next a:before {
-  font-family: FontAwesome;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
   content: "\f105";
 }
 @media screen and (max-width: 959px) {
@@ -3216,15 +3246,22 @@ pre .javascript .function {
     float: left;
     width: 23.333333333333332%;
     margin: 0 0.833333333333333%;
+    position: absolute;
+    top: 5px;
+    bottom: 0;
+    right: 0;
   }
 }
 [data-theme="dark"] .sidebar-wrap {
   -webkit-box-shadow: 0 0 10px 3px var(--color-hover-shadow);
   box-shadow: 0 0 10px 3px var(--color-hover-shadow);
 }
+[data-theme="dark"] #mobile-nav .sidebar-wrap {
+  -webkit-box-shadow: 0 0 0 0;
+  box-shadow: 0 0 0 0;
+}
 .sidebar-wrap {
   width: 100%;
-  height: 100%;
   border-radius: 5px;
   background: var(--color-wrap);
   display: -webkit-box;
@@ -3261,14 +3298,32 @@ pre .javascript .function {
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+.sidebar-wrap.wrap-sticky {
+  position: sticky;
+  top: 5px;
+}
 .sidebar-wrap:hover {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -webkit-transform: scale(1.015);
+  -moz-transform: scale(1.015);
+  -o-transform: scale(1.015);
+  -ms-transform: scale(1.015);
+  transform: scale(1.015);
   -webkit-box-shadow: 0 0 10px 3px var(--color-hover-shadow);
   box-shadow: 0 0 10px 3px var(--color-hover-shadow);
+}
+#mobile-nav .sidebar-wrap:hover {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-box-shadow: 0 0 0 0;
+  box-shadow: 0 0 0 0;
 }
 .sidebar-author {
   display: -webkit-box;
@@ -3438,6 +3493,13 @@ pre .javascript .function {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+  width: 70%;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 .sidebar-social div a {
   position: absolute;
@@ -3449,11 +3511,51 @@ pre .javascript .function {
 .icon-github,
 .icon-google,
 .icon-facebook,
-.icon-twitter {
-  margin: 0 10px;
+.icon-twitter,
+.icon-instagram,
+.icon-linkedin,
+.icon-pinterest,
+.icon-youtube,
+.icon-vimeo,
+.icon-flickr,
+.icon-dribbble,
+.icon-behance,
+.icon-bilibili,
+.icon-weibo,
+.icon-zhihu,
+.icon-douban,
+.icon-reddit,
+.icon-tumblr,
+.icon-medium,
+.icon-deviantart,
+.icon-stackoverflow,
+.icon-keybase,
+.icon-telegram,
+.icon-discord,
+.icon-steam {
   position: relative;
-  font-size: 25px;
-  font-family: FontAwesome;
+  font-size: 20px;
+  width: 36px;
+  height: 25px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
 }
 .icon-github {
   color: #191717;
@@ -3468,16 +3570,142 @@ pre .javascript .function {
   content: "\f0d5";
 }
 .icon-facebook {
-  color: #1877f2;
+  color: #3b5998;
 }
 .icon-facebook:before {
   content: "\f09a";
 }
 .icon-twitter {
-  color: #00aff0;
+  color: #191717;
 }
 .icon-twitter:before {
-  content: "\f099";
+  content: "\e61b";
+}
+.icon-instagram {
+  color: #e1306c;
+}
+.icon-instagram:before {
+  content: "\f16d";
+}
+.icon-linkedin {
+  color: #0e76a8;
+}
+.icon-linkedin:before {
+  content: "\f08c";
+}
+.icon-pinterest {
+  color: #bd081c;
+}
+.icon-pinterest:before {
+  content: "\f0d2";
+}
+.icon-youtube {
+  color: #f00;
+}
+.icon-youtube:before {
+  content: "\f167";
+}
+.icon-vimeo {
+  color: #1ab7ea;
+}
+.icon-vimeo:before {
+  content: "\f194";
+}
+.icon-flickr {
+  color: #ff0084;
+}
+.icon-flickr:before {
+  content: "\f16e";
+}
+.icon-dribbble {
+  color: #ea4c89;
+}
+.icon-dribbble:before {
+  content: "\f17d";
+}
+.icon-behance {
+  color: #1769ff;
+}
+.icon-behance:before {
+  content: "\f1b4";
+}
+.icon-bilibili {
+  color: #00a1d6;
+}
+.icon-bilibili:before {
+  content: "\e3d9";
+}
+.icon-weibo {
+  color: #e6162d;
+}
+.icon-weibo:before {
+  content: "\f18a";
+}
+.icon-zhihu {
+  color: #0084ff;
+}
+.icon-zhihu:before {
+  content: "\f63f";
+}
+.icon-douban {
+  color: #072;
+}
+.icon-douban:before {
+  content: "\f264";
+}
+.icon-reddit {
+  color: #ff4500;
+}
+.icon-reddit:before {
+  content: "\f1a1";
+}
+.icon-tumblr {
+  color: #35465c;
+}
+.icon-tumblr:before {
+  content: "\f173";
+}
+.icon-medium {
+  color: #00ab6c;
+}
+.icon-medium:before {
+  content: "\f23a";
+}
+.icon-deviantart {
+  color: #05cc47;
+}
+.icon-deviantart:before {
+  content: "\f1bd";
+}
+.icon-stackoverflow {
+  color: #f48024;
+}
+.icon-stackoverflow:before {
+  content: "\f16c";
+}
+.icon-keybase {
+  color: #33a0ff;
+}
+.icon-keybase:before {
+  content: "\f4f5";
+}
+.icon-telegram {
+  color: #08c;
+}
+.icon-telegram:before {
+  content: "\f2c6";
+}
+.icon-discord {
+  color: #7289da;
+}
+.icon-discord:before {
+  content: "\f392";
+}
+.icon-steam {
+  color: #171a21;
+}
+.icon-steam:before {
+  content: "\f1b6";
 }
 .sidebar-menu-icon,
 .sidebar-menu-link {
@@ -3600,6 +3828,131 @@ pre .javascript .function {
   -ms-filter: none;
   filter: none;
   background: url("/images/taichi-fill.svg") no-repeat center/80%;
+}
+.sidebar-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--color-wrap);
+  border-radius: 50%;
+  font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
+  -webkit-box-shadow: 1px 2px 10px rgba(0,0,0,0.2);
+  box-shadow: 1px 2px 10px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+.sidebar-top:before {
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -o-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  content: "\f062";
+  color: var(--red-1);
+  font-size: 20px;
+}
+.sidebar-toc {
+  width: 100%;
+  padding: 10px 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.sidebar-toc-wrapper {
+  max-height: calc(100vh - 80px);
+  overflow: auto;
+}
+.sidebar-toc-wrapper::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.toc {
+  color: var(--color-link);
+}
+.toc a,
+.toc span {
+  color: var(--color-link);
+  text-decoration: none;
+  opacity: 0.8;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+  filter: alpha(opacity=80);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.toc a:hover,
+.toc span:hover {
+  color: var(--red-0);
+}
+.toc ol {
+  margin-left: 15px;
+  list-style: none;
+}
+.toc li {
+  margin: 10px 0;
+}
+.toc li:before {
+  content: "";
+  width: 5px;
+  height: 10px;
+  background: var(--color-h2-after);
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 11px;
+  -webkit-box-shadow: 0 2px 12px var(--color-h2-after-shadow);
+  box-shadow: 0 2px 12px var(--color-h2-after-shadow);
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  -webkit-transition: all 0.35s ease-out;
+  -moz-transition: all 0.35s ease-out;
+  -o-transition: all 0.35s ease-out;
+  -ms-transition: all 0.35s ease-out;
+  transition: all 0.35s ease-out;
+}
+.toc li:hover:before {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+.toc-title {
+  letter-spacing: 2px;
+  color: var(--color-grey);
+  line-height: 1em;
+  font-weight: bold;
+  padding: 10px 0;
+}
+.toc-item {
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 [data-theme="dark"] ::-webkit-scrollbar,
 [data-theme="dark"] ::-webkit-scrollbar-track {
