@@ -481,6 +481,10 @@ body {
 }
 #main {
   padding: 0 5px;
+  max-width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 #content {
   position: relative;
@@ -1238,7 +1242,6 @@ a.article-title:hover {
   zoom: 1;
   font-size: 14px;
   border-top: 1px solid var(--color-border);
-  padding-top: 20px;
   margin: 0 20px 20px;
 }
 .article-footer:before,
@@ -1257,6 +1260,7 @@ a.article-title:hover {
 .article-comment-link,
 .article-visitor-link {
   color: var(--red-1);
+  margin-top: 20px;
 }
 .article-tag-list-item {
   float: left;
@@ -1265,6 +1269,7 @@ a.article-title:hover {
   background: var(--red-5);
   border-radius: 20px;
   padding: 10px 18px;
+  margin-top: 20px;
   margin-right: 10px;
 }
 .article-tag-list-link:before {
@@ -1275,6 +1280,7 @@ a.article-title:hover {
 .article-comment-link {
   float: right;
   background: var(--red-5);
+  margin-left: 20px;
   border-radius: 20px;
   padding: 10px 18px;
 }
@@ -1299,7 +1305,6 @@ a.article-title:hover {
 }
 .article-visitor-link {
   float: right;
-  margin-right: 20px;
   font-size: 14px;
   background: var(--red-5);
   border-radius: 20px;
