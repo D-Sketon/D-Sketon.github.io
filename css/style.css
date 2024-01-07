@@ -41,7 +41,7 @@
   --red-4: rgba(255,208,208,0.5);
   --red-5: rgba(255,228,228,0.2);
   --red-5-5: rgba(255,236,236,0.1);
-  --red-6: #fff3f3;
+  --red-6: rgba(255,243,243,0.2);
   --color-default-font: #999;
   --color-default: #999;
   --color-grey: #999;
@@ -486,6 +486,11 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+@media screen and (max-width: 959px) {
+  #main {
+    min-width: 100%;
+  }
+}
 #content {
   position: relative;
   padding-top: 5px;
@@ -813,7 +818,7 @@ body {
   letter-spacing: 1px;
 }
 .main-nav-icon {
-  background: url("/images/taichi.svg") no-repeat center/80%;
+  background: url("/images/taichi.png") no-repeat center/80%;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -2382,7 +2387,7 @@ a.article-title:hover {
   opacity: 0.6;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
   filter: alpha(opacity=60);
-  background: url("/images/taichi.svg") no-repeat center/80%;
+  background: url("/images/taichi.png") no-repeat center/80%;
   -webkit-animation: rotate-all 3s infinite;
   -moz-animation: rotate-all 3s infinite;
   -o-animation: rotate-all 3s infinite;
@@ -3093,11 +3098,11 @@ pre .javascript .function {
   z-index: 2080;
   background-color: rgba(0,0,0,0.3);
 }
-.algolia-popup {
+.reimu-popup {
   overflow: hidden;
   padding: 0;
 }
-.algolia-popup .popup-btn-close {
+.reimu-popup .popup-btn-close {
   position: absolute;
   right: 15px;
   color: var(--red-1);
@@ -3108,11 +3113,11 @@ pre .javascript .function {
   padding-left: 15px;
   top: 10px;
 }
-.algolia-popup .popup-btn-close:before {
+.reimu-popup .popup-btn-close:before {
   font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
   content: "\f057";
 }
-.algolia-search {
+.reimu-search {
   padding: 10px 15px 5px;
   max-height: 50px;
   border-bottom: 1px solid #ccc;
@@ -3120,35 +3125,35 @@ pre .javascript .function {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
-.algolia-search-input-icon {
+.reimu-search-input-icon {
   display: inline-block;
   width: 20px;
   font-size: 18px;
 }
-.algolia-search-input-icon:before {
+.reimu-search-input-icon:before {
   font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "Font Awesome 5 Free", "Font Awesome 5 Brands", "FontAwesome";
   content: "\f002";
 }
-.algolia-search-input {
+.reimu-search-input {
   display: inline-block;
   width: calc(90% - 20px);
 }
-.algolia-search-input input {
+.reimu-search-input input {
   padding: 5px 0;
   width: 100%;
   outline: none;
   border: none;
   background: transparent;
 }
-.algolia-powered {
+.reimu-powered {
   float: right;
 }
-.algolia-powered img {
+.reimu-powered img {
   display: inline-block;
   height: 18px;
   vertical-align: middle;
 }
-.algolia-results {
+.reimu-results {
   position: relative;
   overflow: auto;
   padding: 10px 30px;
@@ -3157,27 +3162,27 @@ pre .javascript .function {
   box-sizing: border-box;
   height: calc(100% - 50px);
 }
-.algolia-results hr {
+.reimu-results hr {
   margin: 10px 0;
 }
-.algolia-results em {
+.reimu-results em {
   font-weight: bold;
   margin: 0;
   padding: 0 2px;
   color: var(--red-1);
 }
-#algolia-hits {
+#reimu-hits {
   margin-top: 10px;
   margin-left: 30px;
 }
-.algolia-hit-item-link {
+.reimu-hit-item-link {
   display: block;
   text-decoration: none;
   color: var(--red-2);
   margin-left: 15px;
   padding: 12px 0;
 }
-.algolia-hit-item-link:before {
+.reimu-hit-item-link:before {
   content: "";
   width: 6px;
   height: 15px;
@@ -3198,7 +3203,7 @@ pre .javascript .function {
   -ms-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-.algolia-hit-item-link:hover:before {
+.reimu-hit-item-link:hover:before {
   width: 6px;
   height: 6px;
   border-radius: 50%;
@@ -3211,7 +3216,7 @@ pre .javascript .function {
   -ms-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-.algolia-pagination {
+.reimu-pagination {
   margin: 10px auto;
   background: var(--color-wrap);
   border-radius: 5px;
@@ -3219,7 +3224,7 @@ pre .javascript .function {
   color: var(--color-grey);
   overflow: hidden;
 }
-.algolia-pagination a {
+.reimu-pagination a {
   padding: 10px 15px;
   color: var(--color-grey);
   text-decoration: none;
@@ -3229,7 +3234,7 @@ pre .javascript .function {
   -ms-transition: background 0.2s ease;
   transition: background 0.2s ease;
 }
-.algolia-pagination a:hover {
+.reimu-pagination a:hover {
   background: var(--red-2);
   -webkit-transition: background 0.2s ease;
   -moz-transition: background 0.2s ease;
@@ -3238,22 +3243,22 @@ pre .javascript .function {
   transition: background 0.2s ease;
   color: #fff;
 }
-.algolia-pagination .pagination-item {
+.reimu-pagination .pagination-item {
   display: inline-block;
 }
-.algolia-pagination .page-number {
+.reimu-pagination .page-number {
   display: inline-block;
   border-radius: 5px;
   margin: 5px 5px;
 }
-.algolia-pagination .current .page-number {
+.reimu-pagination .current .page-number {
   color: #fff;
   background: var(--red-1);
   font-weight: bold;
   -webkit-box-shadow: 0 2px 6px rgba(255,78,106,0.55);
   box-shadow: 0 2px 6px rgba(255,78,106,0.55);
 }
-.algolia-pagination .disabled-item {
+.reimu-pagination .disabled-item {
   display: none;
 }
 .ais-pagination--item__previous a:before {
@@ -3800,7 +3805,7 @@ pre .javascript .function {
   transform: rotate(360deg);
 }
 .sidebar-menu-icon {
-  background: url("/images/taichi.svg") no-repeat center/80%;
+  background: url("/images/taichi.png") no-repeat center/80%;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -o-transform: rotate(0deg);
@@ -3856,7 +3861,7 @@ pre .javascript .function {
   opacity: 1;
   -ms-filter: none;
   filter: none;
-  background: url("/images/taichi-fill.svg") no-repeat center/80%;
+  background: url("/images/taichi-fill.png") no-repeat center/80%;
 }
 .sidebar-top {
   position: fixed;
@@ -4007,7 +4012,6 @@ pre .javascript .function {
   padding: 10px 0;
 }
 .toc-item {
-  overflow: hidden;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -4102,6 +4106,9 @@ pre .javascript .function {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
+}
+.sidebar-toc-sidebar {
+  width: 100%;
 }
 [data-theme="dark"] ::-webkit-scrollbar,
 [data-theme="dark"] ::-webkit-scrollbar-track {
