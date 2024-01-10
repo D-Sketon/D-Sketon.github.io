@@ -6,7 +6,7 @@
   <link href="https://d-sketon.github.io/atom.xml" rel="self"/>
   
   <link href="https://d-sketon.github.io/"/>
-  <updated>2023-11-11T10:32:35.230Z</updated>
+  <updated>2024-01-10T03:41:31.999Z</updated>
   <id>https://d-sketon.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>为你的网站添加鼠标烟花爆炸效果</title>
+    <link href="https://d-sketon.github.io/20240110/mouse-firework-readme/"/>
+    <id>https://d-sketon.github.io/20240110/mouse-firework-readme/</id>
+    <published>2024-01-10T03:36:21.000Z</published>
+    <updated>2024-01-10T03:41:31.999Z</updated>
+    
+    
+    <summary type="html">使用mouse-firework，仅仅只需一行代码，为你的网站添加鼠标烟花爆炸效果！</summary>
+    
+    
+    
+    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="hexo" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://d-sketon.github.io/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo 7 迁移指南</title>
@@ -77,7 +98,7 @@
     <link href="https://d-sketon.github.io/20230707/hexo-theme-reimu-guide/"/>
     <id>https://d-sketon.github.io/20230707/hexo-theme-reimu-guide/</id>
     <published>2023-07-07T15:02:43.000Z</published>
-    <updated>2024-01-07T08:02:01.007Z</updated>
+    <updated>2024-01-08T14:01:31.026Z</updated>
     
     
       
@@ -433,25 +454,6 @@
     
     
     <category term="leancloud" scheme="https://d-sketon.github.io/tags/leancloud/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>百度地图API GL使用总结</title>
-    <link href="https://d-sketon.github.io/20211224/baidumap-api/"/>
-    <id>https://d-sketon.github.io/20211224/baidumap-api/</id>
-    <published>2021-12-24T14:37:41.000Z</published>
-    <updated>2023-01-17T04:45:37.823Z</updated>
-    
-    
-    <summary type="html">百度地图API GL使用总结</summary>
-    
-    
-    
-    <category term="前端" scheme="https://d-sketon.github.io/categories/%E5%89%8D%E7%AB%AF/"/>
-    
-    
-    <category term="前端" scheme="https://d-sketon.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   
