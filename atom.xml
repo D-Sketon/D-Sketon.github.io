@@ -6,7 +6,7 @@
   <link href="https://d-sketon.github.io/atom.xml" rel="self"/>
   
   <link href="https://d-sketon.github.io/"/>
-  <updated>2024-01-10T03:41:31.999Z</updated>
+  <updated>2024-01-14T13:37:30.612Z</updated>
   <id>https://d-sketon.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo-theme-reimu效果展示</title>
+    <link href="https://d-sketon.github.io/20240114/hexo-theme-reimu-content/"/>
+    <id>https://d-sketon.github.io/20240114/hexo-theme-reimu-content/</id>
+    <published>2024-01-14T13:15:35.000Z</published>
+    <updated>2024-01-14T13:37:30.612Z</updated>
+    
+    
+    <summary type="html">hexo-theme-reimu效果展示</summary>
+    
+    
+    
+    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="hexo" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://d-sketon.github.io/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>为你的网站添加鼠标烟花爆炸效果</title>
@@ -98,7 +119,7 @@
     <link href="https://d-sketon.github.io/20230707/hexo-theme-reimu-guide/"/>
     <id>https://d-sketon.github.io/20230707/hexo-theme-reimu-guide/</id>
     <published>2023-07-07T15:02:43.000Z</published>
-    <updated>2024-01-14T12:00:24.911Z</updated>
+    <updated>2024-01-14T13:41:05.678Z</updated>
     
     
       
@@ -435,25 +456,6 @@
     <category term="CSAPP" scheme="https://d-sketon.github.io/tags/CSAPP/"/>
     
     <category term="深入理解计算机系统" scheme="https://d-sketon.github.io/tags/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>修复leancloud无法显示阅读次数</title>
-    <link href="https://d-sketon.github.io/20220601/leancloud-recovery/"/>
-    <id>https://d-sketon.github.io/20220601/leancloud-recovery/</id>
-    <published>2022-06-01T06:52:41.000Z</published>
-    <updated>2023-01-17T04:05:05.786Z</updated>
-    
-    
-    <summary type="html">本人近期打算修复一下一直无法使用的博客阅读次数</summary>
-    
-    
-    
-    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
-    
-    
-    <category term="leancloud" scheme="https://d-sketon.github.io/tags/leancloud/"/>
     
   </entry>
   
