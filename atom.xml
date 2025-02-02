@@ -6,7 +6,7 @@
   <link href="https://d-sketon.github.io/atom.xml" rel="self"/>
   
   <link href="https://d-sketon.github.io/"/>
-  <updated>2024-12-21T08:23:56.736Z</updated>
+  <updated>2025-01-31T11:08:33.066Z</updated>
   <id>https://d-sketon.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我是如何让Hexo占用的内存减少50%的</title>
+    <link href="https://d-sketon.github.io/20250131/hexo-source2/"/>
+    <id>https://d-sketon.github.io/20250131/hexo-source2/</id>
+    <published>2025-01-31T07:32:04.000Z</published>
+    <updated>2025-01-31T11:08:33.066Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;众所周知，Hexo 虽然是一个非常优秀的静态博客框架，但是由于 Node.js 的特性，Hexo 在编译的时候相比于 Hugo 会占用大量的内存，这对于一些配置较低的服务器来说是一个很大的问题。&lt;a href=&quot;https://github.com/hexojs/hexo/issues/5552&quot;&gt;#5522&lt;/a&gt;、&lt;a href=&quot;https://github.com/hexojs/hexo/issues/2165&quot;&gt;#2165&lt;/a&gt; 等 ISSUE 也反映了这个问题。难道这就是 Hexo 的极限了吗？当然不是，下面我就来介绍一下我是如何让 Hexo 占用的内存减少 50% 的。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="hexo" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://d-sketon.github.io/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>2024年 JavaScript Promise 性能对比</title>
@@ -173,7 +194,7 @@
     <link href="https://d-sketon.github.io/20240601/hexo-theme-reimu-log/"/>
     <id>https://d-sketon.github.io/20240601/hexo-theme-reimu-log/</id>
     <published>2024-06-01T11:58:38.000Z</published>
-    <updated>2025-01-04T16:51:50.563Z</updated>
+    <updated>2025-02-02T08:05:58.942Z</updated>
     
     
     <summary type="html">&lt;p&gt;hexo-theme-reimu 的开发日志，记录了每一次更新的内容&lt;/p&gt;
@@ -348,7 +369,7 @@
     <link href="https://d-sketon.github.io/20230128/parallel-programming-design/"/>
     <id>https://d-sketon.github.io/20230128/parallel-programming-design/</id>
     <published>2023-01-28T05:06:20.000Z</published>
-    <updated>2023-01-28T05:39:24.346Z</updated>
+    <updated>2025-02-02T03:36:38.156Z</updated>
     
     
     <summary type="html">并行程序设计 学习笔记</summary>
@@ -390,7 +411,7 @@
     <link href="https://d-sketon.github.io/20230128/mac-layer/"/>
     <id>https://d-sketon.github.io/20230128/mac-layer/</id>
     <published>2023-01-28T04:21:53.000Z</published>
-    <updated>2023-01-28T05:39:12.869Z</updated>
+    <updated>2025-02-02T03:36:59.582Z</updated>
     
     
     <summary type="html">计算机网络-介质访问控制子层 学习笔记</summary>
@@ -411,7 +432,7 @@
     <link href="https://d-sketon.github.io/20221229/clrs-book-note/"/>
     <id>https://d-sketon.github.io/20221229/clrs-book-note/</id>
     <published>2022-12-29T03:36:35.000Z</published>
-    <updated>2024-09-08T05:59:32.595Z</updated>
+    <updated>2025-02-02T03:34:48.286Z</updated>
     
     
     <summary type="html">本笔记整理来自于《算法导论》，包含基础知识，排序和顺序统计量，高级设计和分析技术，图算法。可能会有疏漏的部分，敬请谅解</summary>
@@ -424,27 +445,6 @@
     
     
     <category term="算法" scheme="https://d-sketon.github.io/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo源码分析（一）issue #4976的研究</title>
-    <link href="https://d-sketon.github.io/20220912/hexo-source1/"/>
-    <id>https://d-sketon.github.io/20220912/hexo-source1/</id>
-    <published>2022-09-12T09:32:50.000Z</published>
-    <updated>2024-08-25T13:05:02.032Z</updated>
-    
-    
-    <summary type="html">最近看到了Hexo的issue &#92;#4976，其中提到了大文件的CSS在生成的过程中可能会丢失部分代码。本人感觉这个问题非常有意思，于是自己也尝试了一下大文件的CSS，没想到也成功复现了这个问题。</summary>
-    
-    
-    
-    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
-    
-    <category term="hexo" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/hexo/"/>
-    
-    
-    <category term="Hexo" scheme="https://d-sketon.github.io/tags/Hexo/"/>
     
   </entry>
   
