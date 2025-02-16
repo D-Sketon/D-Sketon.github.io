@@ -6,7 +6,7 @@
   <link href="https://d-sketon.github.io/atom.xml" rel="self"/>
   
   <link href="https://d-sketon.github.io/"/>
-  <updated>2025-01-31T11:08:33.066Z</updated>
+  <updated>2025-02-09T07:49:54.449Z</updated>
   <id>https://d-sketon.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://d-sketon.github.io/20250131/hexo-source2/"/>
     <id>https://d-sketon.github.io/20250131/hexo-source2/</id>
     <published>2025-01-31T07:32:04.000Z</published>
-    <updated>2025-01-31T11:08:33.066Z</updated>
+    <updated>2025-02-09T07:49:54.449Z</updated>
     
     
     <summary type="html">&lt;p&gt;众所周知，Hexo 虽然是一个非常优秀的静态博客框架，但是由于 Node.js 的特性，Hexo 在编译的时候相比于 Hugo 会占用大量的内存，这对于一些配置较低的服务器来说是一个很大的问题。&lt;a href=&quot;https://github.com/hexojs/hexo/issues/5552&quot;&gt;#5522&lt;/a&gt;、&lt;a href=&quot;https://github.com/hexojs/hexo/issues/2165&quot;&gt;#2165&lt;/a&gt; 等 ISSUE 也反映了这个问题。难道这就是 Hexo 的极限了吗？当然不是，下面我就来介绍一下我是如何让 Hexo 占用的内存减少 50% 的。&lt;/p&gt;</summary>
@@ -194,7 +194,7 @@
     <link href="https://d-sketon.github.io/20240601/hexo-theme-reimu-log/"/>
     <id>https://d-sketon.github.io/20240601/hexo-theme-reimu-log/</id>
     <published>2024-06-01T11:58:38.000Z</published>
-    <updated>2025-02-09T06:51:07.254Z</updated>
+    <updated>2025-02-16T12:14:49.162Z</updated>
     
     
     <summary type="html">&lt;p&gt;hexo-theme-reimu 的开发日志，记录了每一次更新的内容&lt;/p&gt;
@@ -216,7 +216,7 @@
     <link href="https://d-sketon.github.io/20240114/hexo-theme-reimu-content/"/>
     <id>https://d-sketon.github.io/20240114/hexo-theme-reimu-content/</id>
     <published>2024-01-14T13:15:35.000Z</published>
-    <updated>2025-02-09T06:32:47.827Z</updated>
+    <updated>2025-02-16T12:07:30.341Z</updated>
     
     
     <summary type="html">hexo-theme-reimu效果展示</summary>
@@ -314,7 +314,7 @@
     <link href="https://d-sketon.github.io/20230707/hexo-theme-reimu-guide/"/>
     <id>https://d-sketon.github.io/20230707/hexo-theme-reimu-guide/</id>
     <published>2023-07-07T15:02:43.000Z</published>
-    <updated>2025-02-08T13:25:11.990Z</updated>
+    <updated>2025-02-16T14:28:28.768Z</updated>
     
     
       
@@ -322,6 +322,33 @@
         
         
     <summary type="html">&lt;p&gt;因为本人是车车人，所以制作了 &lt;code&gt;hexo-theme-reimu&lt;/code&gt; 这样一款博丽灵梦风格的 Hexo 主题，其融合了&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="hexo" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://d-sketon.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo-theme-reimu食用指南</title>
+    <link href="https://d-sketon.github.io/20230707/hexo-theme-reimu-guide/"/>
+    <id>https://d-sketon.github.io/20230707/hexo-theme-reimu-guide/</id>
+    <published>2023-07-07T15:02:43.000Z</published>
+    <updated>2025-02-16T14:29:29.299Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;As a fan of the Touhou Project, I have created &lt;code&gt;hexo-theme-reimu&lt;/code&gt;, a Hakurei Reimu-themed Hexo theme. It combines elements</summary>
         
       
     
@@ -424,27 +451,6 @@
     
     
     <category term="计算机网络" scheme="https://d-sketon.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>算法导论 学习笔记</title>
-    <link href="https://d-sketon.github.io/20221229/clrs-book-note/"/>
-    <id>https://d-sketon.github.io/20221229/clrs-book-note/</id>
-    <published>2022-12-29T03:36:35.000Z</published>
-    <updated>2025-02-02T03:34:48.286Z</updated>
-    
-    
-    <summary type="html">本笔记整理来自于《算法导论》，包含基础知识，排序和顺序统计量，高级设计和分析技术，图算法。可能会有疏漏的部分，敬请谅解</summary>
-    
-    
-    
-    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
-    
-    <category term="学习笔记" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="算法" scheme="https://d-sketon.github.io/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
