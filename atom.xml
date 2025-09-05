@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>拔剑Sketon</title>
+  
+  <subtitle>东方人的日常</subtitle>
+  <link href="https://d-sketon.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://d-sketon.github.io/"/>
+  <updated>2025-02-23T10:59:38.293Z</updated>
+  <id>https://d-sketon.github.io/</id>
+  
+  <author>
+    <name>D-Sketon</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何为Hexo添加多语言支持</title>
+    <link href="https://d-sketon.github.io/20250223/hexo-theme-reimu-i18n/"/>
+    <id>https://d-sketon.github.io/20250223/hexo-theme-reimu-i18n/</id>
+    <published>2025-02-23T06:27:10.000Z</published>
+    <updated>2025-02-23T10:59:38.293Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Hexo 作为一个静态博客框架，原生对多语言的支持能力有限，仅支持生成单一语言的网站。为了解决动态切换语言的需求，社区大佬开发了如 &lt;a href=&quot;https://github.com/Jamling/hexo-generator-i18n&quot;&gt;hexo-generator-i18n&lt;/a&gt; 等插件。但其功能仍局限于 page 和 archive 的多语言化，而对于 post 的多语言则无能为力。&lt;/p&gt;
+&lt;p&gt;hexo-theme-reimu 最初也不支持多语言，但在 v1.4.0 版本中，我参考了 &lt;code&gt;hexo-generator-i18n&lt;/code&gt; 的实现，为其添加了 page/post/archive 多语言支持，并在 v1.5.0 版本中进一步完善了功能。本文将介绍我是如何为 hexo-theme-reimu 添加多语言支持的，以及如何使用 hexo-theme-reimu 的多语言功能。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="hexo" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://d-sketon.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>How to Add Multilingual Support to Hexo</title>
+    <link href="https://d-sketon.github.io/20250223/hexo-theme-reimu-i18n/"/>
+    <id>https://d-sketon.github.io/20250223/hexo-theme-reimu-i18n/</id>
+    <published>2025-02-23T06:27:10.000Z</published>
+    <updated>2025-02-23T10:59:31.831Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Hexo, as a static blog framework, has limited native support for multiple languages and only supports generating single-language websites. To address the need for dynamic language switching, community developers have created plugins like &lt;a href=&quot;https://github.com/Jamling/hexo-generator-i18n&quot;&gt;hexo-generator-i18n&lt;/a&gt;. However, their functionality is still limited to multilingual support for pages and archives, and they cannot handle multilingual posts.&lt;/p&gt;
+&lt;p&gt;hexo-theme-reimu initially didn’t support multiple languages either, but in version v1.4.0, I referenced the implementation of &lt;code&gt;hexo-generator-i18n&lt;/code&gt; and added multilingual support for pages/posts/archives. This functionality was further improved in version v1.5.0. This article will explain how I added multilingual support to hexo-theme-reimu and how to use its multilingual features.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="hexo" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://d-sketon.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我是如何让Hexo占用的内存减少50%的</title>
+    <link href="https://d-sketon.github.io/20250131/hexo-source2/"/>
+    <id>https://d-sketon.github.io/20250131/hexo-source2/</id>
+    <published>2025-01-31T07:32:04.000Z</published>
+    <updated>2025-02-09T07:49:54.449Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;众所周知，Hexo 虽然是一个非常优秀的静态博客框架，但是由于 Node.js 的特性，Hexo 在编译的时候相比于 Hugo 会占用大量的内存，这对于一些配置较低的服务器来说是一个很大的问题。&lt;a href=&quot;https://github.com/hexojs/hexo/issues/5552&quot;&gt;#5522&lt;/a&gt;、&lt;a href=&quot;https://github.com/hexojs/hexo/issues/2165&quot;&gt;#2165&lt;/a&gt; 等 ISSUE 也反映了这个问题。难道这就是 Hexo 的极限了吗？当然不是，下面我就来介绍一下我是如何让 Hexo 占用的内存减少 50% 的。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="hexo" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://d-sketon.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>How I Reduced Hexo&#39;s Memory Usage by 50%</title>
+    <link href="https://d-sketon.github.io/20250131/hexo-source2/"/>
+    <id>https://d-sketon.github.io/20250131/hexo-source2/</id>
+    <published>2025-01-31T07:32:04.000Z</published>
+    <updated>2025-02-23T11:25:10.757Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;As widely known, although Hexo is an excellent static blog framework, due to Node.js characteristics, Hexo consumes significantly more memory during compilation compared to Hugo. This poses a significant challenge for servers with limited resources. Issues like &lt;a href=&quot;https://github.com/hexojs/hexo/issues/5552&quot;&gt;#5522&lt;/a&gt; and &lt;a href=&quot;https://github.com/hexojs/hexo/issues/2165&quot;&gt;#2165&lt;/a&gt; have highlighted this problem. Is this the limit of Hexo’s capabilities? Not at all. Let me show you how I managed to reduce Hexo’s memory consumption by 50%.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="hexo" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://d-sketon.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2024年 JavaScript Promise 性能对比</title>
+    <link href="https://d-sketon.github.io/20241221/2024-promise-performance-benchmark/"/>
+    <id>https://d-sketon.github.io/20241221/2024-promise-performance-benchmark/</id>
+    <published>2024-12-21T06:57:17.000Z</published>
+    <updated>2025-09-04T16:15:51.373Z</updated>
+    
+    
+    <summary type="html">本文对 2024 年 JavaScript Promise 的性能进行对比，看看这几年 Node 原生 Promise 的性能有没有提升？后起之秀 Bun 的 Promise 实现又有怎样的表现？</summary>
+    
+    
+    
+    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="JavaScript" scheme="https://d-sketon.github.io/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>如何定制你的hexo-theme-reimu</title>
+    <link href="https://d-sketon.github.io/20241124/hexo-theme-reimu-customize/"/>
+    <id>https://d-sketon.github.io/20241124/hexo-theme-reimu-customize/</id>
+    <published>2024-11-24T05:12:54.000Z</published>
+    <updated>2025-05-31T09:54:31.226Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;本文针对 v1.0.0+ 版本的 hexo-theme-reimu 主题，介绍如何定制你的 hexo-theme-reimu。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="hexo" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://d-sketon.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>How to customize your hexo-theme-reimu</title>
+    <link href="https://d-sketon.github.io/20241124/hexo-theme-reimu-customize/"/>
+    <id>https://d-sketon.github.io/20241124/hexo-theme-reimu-customize/</id>
+    <published>2024-11-24T05:12:54.000Z</published>
+    <updated>2025-05-31T09:54:53.270Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;This article introduces how to customize your &lt;strong&gt;hexo-theme-reimu&lt;/strong&gt; for versions &lt;strong&gt;v1.0.0+&lt;/strong&gt; of the theme.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="hexo" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://d-sketon.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>astro-theme-reimu 演示站点</title>
+    <link href="https://d-sketon.github.io/20241111/astro-theme-reimu/"/>
+    <id>https://d-sketon.github.io/20241111/astro-theme-reimu/</id>
+    <published>2024-11-11T14:23:15.000Z</published>
+    <updated>2025-09-04T16:16:00.262Z</updated>
+    
+    
+    <summary type="html">如果你想要使用 astro-theme-reimu 主题，请点击该链接查看演示</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>astro-theme-reimu Demo Site</title>
+    <link href="https://d-sketon.github.io/20241111/astro-theme-reimu/"/>
+    <id>https://d-sketon.github.io/20241111/astro-theme-reimu/</id>
+    <published>2024-11-11T14:23:15.000Z</published>
+    <updated>2025-09-04T16:16:05.346Z</updated>
+    
+    
+    <summary type="html">If you want to use the astro-theme-reimu theme, please click this link to see the demo</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>hugo-theme-reimu 演示站点</title>
+    <link href="https://d-sketon.github.io/20241111/hugo-theme-reimu/"/>
+    <id>https://d-sketon.github.io/20241111/hugo-theme-reimu/</id>
+    <published>2024-11-11T14:17:46.000Z</published>
+    <updated>2025-09-04T16:16:12.534Z</updated>
+    
+    
+    <summary type="html">如果你想要使用 hugo-theme-reimu 主题，请点击该链接查看演示</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>hugo-theme-reimu Demo Site</title>
+    <link href="https://d-sketon.github.io/20241111/hugo-theme-reimu/"/>
+    <id>https://d-sketon.github.io/20241111/hugo-theme-reimu/</id>
+    <published>2024-11-11T14:17:46.000Z</published>
+    <updated>2025-09-04T16:16:18.151Z</updated>
+    
+    
+    <summary type="html">If you want to use the hugo-theme-reimu theme, please click this link to see the demo</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>hugo-theme-reimu 迁移指南</title>
+    <link href="https://d-sketon.github.io/20241110/hexo-to-hugo-guide/"/>
+    <id>https://d-sketon.github.io/20241110/hexo-to-hugo-guide/</id>
+    <published>2024-11-10T15:15:08.000Z</published>
+    <updated>2025-07-06T06:25:27.359Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;本文记录了 hugo-theme-reimu 主题和 hexo-theme-reimu 主题的区别，以及如何将 hexo-theme-reimu 主题的文章迁移到 hugo-theme-reimu 主题。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="hexo" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://d-sketon.github.io/tags/Hexo/"/>
+    
+    <category term="Hugo" scheme="https://d-sketon.github.io/tags/Hugo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hugo-theme-reimu Migration Guide</title>
+    <link href="https://d-sketon.github.io/20241110/hexo-to-hugo-guide/"/>
+    <id>https://d-sketon.github.io/20241110/hexo-to-hugo-guide/</id>
+    <published>2024-11-10T15:15:08.000Z</published>
+    <updated>2025-07-06T06:26:24.230Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;This article documents the differences between hugo-theme-reimu and hexo-theme-reimu themes, and how to migrate articles from hexo-theme-reimu to hugo-theme-reimu.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="hexo" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://d-sketon.github.io/tags/Hexo/"/>
+    
+    <category term="Hugo" scheme="https://d-sketon.github.io/tags/Hugo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo 博客性能优化指南 - 以 hexo-theme-reimu 为例</title>
+    <link href="https://d-sketon.github.io/20241019/hexo-performance-optimization-guide/"/>
+    <id>https://d-sketon.github.io/20241019/hexo-performance-optimization-guide/</id>
+    <published>2024-10-19T10:04:49.000Z</published>
+    <updated>2024-10-19T13:00:41.853Z</updated>
+    
+    
+    <summary type="html">本文以hexo-theme-reimu为例，介绍了博客性能优化的方法。</summary>
+    
+    
+    
+    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="hexo" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://d-sketon.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo-midijs插件Demo</title>
+    <link href="https://d-sketon.github.io/20241006/hexo-midijs-demo/"/>
+    <id>https://d-sketon.github.io/20241006/hexo-midijs-demo/</id>
+    <published>2024-10-06T11:02:26.000Z</published>
+    <updated>2024-12-21T06:59:56.821Z</updated>
+    
+    
+    <summary type="html">hexo-midijs插件Demo</summary>
+    
+    
+    
+    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="Hexo" scheme="https://d-sketon.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo-tag-echarts-new插件Demo</title>
+    <link href="https://d-sketon.github.io/20241006/hexo-echarts-demo/"/>
+    <id>https://d-sketon.github.io/20241006/hexo-echarts-demo/</id>
+    <published>2024-10-06T08:57:18.000Z</published>
+    <updated>2025-02-09T05:07:37.051Z</updated>
+    
+    
+    <summary type="html">exo-tag-echarts-new插件Demo</summary>
+    
+    
+    
+    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="Hexo" scheme="https://d-sketon.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo-theme-reimu开发日志</title>
+    <link href="https://d-sketon.github.io/20240601/hexo-theme-reimu-log/"/>
+    <id>https://d-sketon.github.io/20240601/hexo-theme-reimu-log/</id>
+    <published>2024-06-01T11:58:38.000Z</published>
+    <updated>2025-09-05T16:51:09.071Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;hexo-theme-reimu 的开发日志，记录了每一次更新的内容&lt;/p&gt;
+&lt;p&gt;如果你有任何问题或建议，欢迎提交 &lt;a href=&quot;https://github.com/D-Sketon/hexo-theme-reimu/issues&quot;&gt;Issues&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="hexo" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://d-sketon.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo-theme-reimu Development Log</title>
+    <link href="https://d-sketon.github.io/20240601/hexo-theme-reimu-log/"/>
+    <id>https://d-sketon.github.io/20240601/hexo-theme-reimu-log/</id>
+    <published>2024-06-01T11:58:38.000Z</published>
+    <updated>2025-09-05T16:51:27.556Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;If you have any questions or suggestions, feel free to submit an &lt;a href=&quot;https://github.com/D-Sketon/hexo-theme-reimu/issues&quot;&gt;Issue&lt;/a&gt;.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="hexo" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://d-sketon.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo-theme-reimu效果展示</title>
+    <link href="https://d-sketon.github.io/20240114/hexo-theme-reimu-content/"/>
+    <id>https://d-sketon.github.io/20240114/hexo-theme-reimu-content/</id>
+    <published>2024-01-14T13:15:35.000Z</published>
+    <updated>2025-08-24T11:19:04.935Z</updated>
+    
+    
+    <summary type="html">hexo-theme-reimu效果展示</summary>
+    
+    
+    
+    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="hexo" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://d-sketon.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hexo-theme-reimu Content Display</title>
+    <link href="https://d-sketon.github.io/20240114/hexo-theme-reimu-content/"/>
+    <id>https://d-sketon.github.io/20240114/hexo-theme-reimu-content/</id>
+    <published>2024-01-14T13:15:35.000Z</published>
+    <updated>2025-08-24T11:19:25.295Z</updated>
+    
+    
+    <summary type="html">hexo-theme-reimu Content Display</summary>
+    
+    
+    
+    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="hexo" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://d-sketon.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+</feed>
