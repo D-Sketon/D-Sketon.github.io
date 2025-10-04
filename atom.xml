@@ -6,7 +6,7 @@
   <link href="https://d-sketon.github.io/atom.xml" rel="self"/>
   
   <link href="https://d-sketon.github.io/"/>
-  <updated>2025-02-23T10:59:38.293Z</updated>
+  <updated>2025-10-04T17:10:41.425Z</updated>
   <id>https://d-sketon.github.io/</id>
   
   <author>
@@ -15,6 +15,48 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2025年 Hexo 速度真的很慢吗？—— 各版本生成速度对比</title>
+    <link href="https://d-sketon.github.io/20250927/hexo-benchmark-2025/"/>
+    <id>https://d-sketon.github.io/20250927/hexo-benchmark-2025/</id>
+    <published>2025-09-27T05:44:07.000Z</published>
+    <updated>2025-10-04T17:10:41.425Z</updated>
+    
+    
+    <summary type="html">从 v3 到 v8 的冷/热生成速度对比，并与 Hugo 对比的实测数据与图表</summary>
+    
+    
+    
+    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="hexo" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://d-sketon.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Is Hexo Really Slow in 2025? — A Comparison of Generation Speeds Across Versions</title>
+    <link href="https://d-sketon.github.io/20250927/hexo-benchmark-2025/"/>
+    <id>https://d-sketon.github.io/20250927/hexo-benchmark-2025/</id>
+    <published>2025-09-27T05:44:07.000Z</published>
+    <updated>2025-10-04T17:21:53.933Z</updated>
+    
+    
+    <summary type="html">A comparison of cold/hot generation speeds from v3 to v8, with measured data and charts comparing it to Hugo.</summary>
+    
+    
+    
+    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
+    
+    <category term="hexo" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/hexo/"/>
+    
+    
+    <category term="Hexo" scheme="https://d-sketon.github.io/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>如何为Hexo添加多语言支持</title>
@@ -65,7 +107,7 @@
     <link href="https://d-sketon.github.io/20250131/hexo-source2/"/>
     <id>https://d-sketon.github.io/20250131/hexo-source2/</id>
     <published>2025-01-31T07:32:04.000Z</published>
-    <updated>2025-02-09T07:49:54.449Z</updated>
+    <updated>2025-10-04T11:15:10.531Z</updated>
     
     
     <summary type="html">&lt;p&gt;众所周知，Hexo 虽然是一个非常优秀的静态博客框架，但是由于 Node.js 的特性，Hexo 在编译的时候相比于 Hugo 会占用大量的内存，这对于一些配置较低的服务器来说是一个很大的问题。&lt;a href=&quot;https://github.com/hexojs/hexo/issues/5552&quot;&gt;#5522&lt;/a&gt;、&lt;a href=&quot;https://github.com/hexojs/hexo/issues/2165&quot;&gt;#2165&lt;/a&gt; 等 ISSUE 也反映了这个问题。难道这就是 Hexo 的极限了吗？当然不是，下面我就来介绍一下我是如何让 Hexo 占用的内存减少 50% 的。&lt;/p&gt;</summary>
@@ -86,7 +128,7 @@
     <link href="https://d-sketon.github.io/20250131/hexo-source2/"/>
     <id>https://d-sketon.github.io/20250131/hexo-source2/</id>
     <published>2025-01-31T07:32:04.000Z</published>
-    <updated>2025-02-23T11:25:10.757Z</updated>
+    <updated>2025-10-04T11:22:36.698Z</updated>
     
     
     <summary type="html">&lt;p&gt;As widely known, although Hexo is an excellent static blog framework, due to Node.js characteristics, Hexo consumes significantly more memory during compilation compared to Hugo. This poses a significant challenge for servers with limited resources. Issues like &lt;a href=&quot;https://github.com/hexojs/hexo/issues/5552&quot;&gt;#5522&lt;/a&gt; and &lt;a href=&quot;https://github.com/hexojs/hexo/issues/2165&quot;&gt;#2165&lt;/a&gt; have highlighted this problem. Is this the limit of Hexo’s capabilities? Not at all. Let me show you how I managed to reduce Hexo’s memory consumption by 50%.&lt;/p&gt;</summary>
@@ -107,7 +149,7 @@
     <link href="https://d-sketon.github.io/20241221/2024-promise-performance-benchmark/"/>
     <id>https://d-sketon.github.io/20241221/2024-promise-performance-benchmark/</id>
     <published>2024-12-21T06:57:17.000Z</published>
-    <updated>2025-09-04T16:15:51.373Z</updated>
+    <updated>2025-10-04T13:13:30.509Z</updated>
     
     
     <summary type="html">本文对 2024 年 JavaScript Promise 的性能进行对比，看看这几年 Node 原生 Promise 的性能有没有提升？后起之秀 Bun 的 Promise 实现又有怎样的表现？</summary>
@@ -359,48 +401,6 @@
     
     
     <summary type="html">&lt;p&gt;If you have any questions or suggestions, feel free to submit an &lt;a href=&quot;https://github.com/D-Sketon/hexo-theme-reimu/issues&quot;&gt;Issue&lt;/a&gt;.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
-    
-    <category term="hexo" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/hexo/"/>
-    
-    
-    <category term="Hexo" scheme="https://d-sketon.github.io/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo-theme-reimu效果展示</title>
-    <link href="https://d-sketon.github.io/20240114/hexo-theme-reimu-content/"/>
-    <id>https://d-sketon.github.io/20240114/hexo-theme-reimu-content/</id>
-    <published>2024-01-14T13:15:35.000Z</published>
-    <updated>2025-08-24T11:19:04.935Z</updated>
-    
-    
-    <summary type="html">hexo-theme-reimu效果展示</summary>
-    
-    
-    
-    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
-    
-    <category term="hexo" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/hexo/"/>
-    
-    
-    <category term="Hexo" scheme="https://d-sketon.github.io/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo-theme-reimu Content Display</title>
-    <link href="https://d-sketon.github.io/20240114/hexo-theme-reimu-content/"/>
-    <id>https://d-sketon.github.io/20240114/hexo-theme-reimu-content/</id>
-    <published>2024-01-14T13:15:35.000Z</published>
-    <updated>2025-08-24T11:19:25.295Z</updated>
-    
-    
-    <summary type="html">hexo-theme-reimu Content Display</summary>
     
     
     
