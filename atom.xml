@@ -6,7 +6,7 @@
   <link href="https://d-sketon.github.io/atom.xml" rel="self"/>
   
   <link href="https://d-sketon.github.io/"/>
-  <updated>2025-10-04T17:10:41.425Z</updated>
+  <updated>2025-10-04T17:53:39.372Z</updated>
   <id>https://d-sketon.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://d-sketon.github.io/20250927/hexo-benchmark-2025/"/>
     <id>https://d-sketon.github.io/20250927/hexo-benchmark-2025/</id>
     <published>2025-09-27T05:44:07.000Z</published>
-    <updated>2025-10-04T17:10:41.425Z</updated>
+    <updated>2025-10-04T17:53:39.372Z</updated>
     
     
     <summary type="html">从 v3 到 v8 的冷/热生成速度对比，并与 Hugo 对比的实测数据与图表</summary>
@@ -42,7 +42,7 @@
     <link href="https://d-sketon.github.io/20250927/hexo-benchmark-2025/"/>
     <id>https://d-sketon.github.io/20250927/hexo-benchmark-2025/</id>
     <published>2025-09-27T05:44:07.000Z</published>
-    <updated>2025-10-04T17:21:53.933Z</updated>
+    <updated>2025-10-04T17:54:06.076Z</updated>
     
     
     <summary type="html">A comparison of cold/hot generation speeds from v3 to v8, with measured data and charts comparing it to Hugo.</summary>
@@ -103,14 +103,14 @@
   </entry>
   
   <entry>
-    <title>我是如何让Hexo占用的内存减少50%的</title>
+    <title>我是如何让Hexo占用的内存减少30%的</title>
     <link href="https://d-sketon.github.io/20250131/hexo-source2/"/>
     <id>https://d-sketon.github.io/20250131/hexo-source2/</id>
     <published>2025-01-31T07:32:04.000Z</published>
-    <updated>2025-10-04T11:15:10.531Z</updated>
+    <updated>2025-01-31T07:32:04.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;众所周知，Hexo 虽然是一个非常优秀的静态博客框架，但是由于 Node.js 的特性，Hexo 在编译的时候相比于 Hugo 会占用大量的内存，这对于一些配置较低的服务器来说是一个很大的问题。&lt;a href=&quot;https://github.com/hexojs/hexo/issues/5552&quot;&gt;#5522&lt;/a&gt;、&lt;a href=&quot;https://github.com/hexojs/hexo/issues/2165&quot;&gt;#2165&lt;/a&gt; 等 ISSUE 也反映了这个问题。难道这就是 Hexo 的极限了吗？当然不是，下面我就来介绍一下我是如何让 Hexo 占用的内存减少 50% 的。&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;众所周知，Hexo 虽然是一个非常优秀的静态博客框架，但是由于 Node.js 的特性，Hexo 在编译的时候相比于 Hugo 会占用大量的内存，这对于一些配置较低的服务器来说是一个很大的问题。&lt;a href=&quot;https://github.com/hexojs/hexo/issues/5552&quot;&gt;#5522&lt;/a&gt;、&lt;a href=&quot;https://github.com/hexojs/hexo/issues/2165&quot;&gt;#2165&lt;/a&gt; 等 ISSUE 也反映了这个问题。难道这就是 Hexo 的极限了吗？当然不是，下面我就来介绍一下我是如何让 Hexo 占用的内存减少 30% 的。&lt;/p&gt;</summary>
     
     
     
@@ -124,14 +124,14 @@
   </entry>
   
   <entry>
-    <title>How I Reduced Hexo&#39;s Memory Usage by 50%</title>
+    <title>How I Reduced Hexo&#39;s Memory Usage by 30%</title>
     <link href="https://d-sketon.github.io/20250131/hexo-source2/"/>
     <id>https://d-sketon.github.io/20250131/hexo-source2/</id>
     <published>2025-01-31T07:32:04.000Z</published>
-    <updated>2025-10-04T11:22:36.698Z</updated>
+    <updated>2025-01-31T07:32:04.000Z</updated>
     
     
-    <summary type="html">&lt;p&gt;As widely known, although Hexo is an excellent static blog framework, due to Node.js characteristics, Hexo consumes significantly more memory during compilation compared to Hugo. This poses a significant challenge for servers with limited resources. Issues like &lt;a href=&quot;https://github.com/hexojs/hexo/issues/5552&quot;&gt;#5522&lt;/a&gt; and &lt;a href=&quot;https://github.com/hexojs/hexo/issues/2165&quot;&gt;#2165&lt;/a&gt; have highlighted this problem. Is this the limit of Hexo’s capabilities? Not at all. Let me show you how I managed to reduce Hexo’s memory consumption by 50%.&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;As widely known, although Hexo is an excellent static blog framework, due to Node.js characteristics, Hexo consumes significantly more memory during compilation compared to Hugo. This poses a significant challenge for servers with limited resources. Issues like &lt;a href=&quot;https://github.com/hexojs/hexo/issues/5552&quot;&gt;#5522&lt;/a&gt; and &lt;a href=&quot;https://github.com/hexojs/hexo/issues/2165&quot;&gt;#2165&lt;/a&gt; have highlighted this problem. Is this the limit of Hexo’s capabilities? Not at all. Let me show you how I managed to reduce Hexo’s memory consumption by 30%.&lt;/p&gt;</summary>
     
     
     
@@ -375,7 +375,7 @@
     <link href="https://d-sketon.github.io/20240601/hexo-theme-reimu-log/"/>
     <id>https://d-sketon.github.io/20240601/hexo-theme-reimu-log/</id>
     <published>2024-06-01T11:58:38.000Z</published>
-    <updated>2025-09-24T16:01:39.043Z</updated>
+    <updated>2025-10-04T17:49:37.648Z</updated>
     
     
     <summary type="html">&lt;p&gt;hexo-theme-reimu 的开发日志，记录了每一次更新的内容&lt;/p&gt;
