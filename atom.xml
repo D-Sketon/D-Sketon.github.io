@@ -6,7 +6,7 @@
   <link href="https://d-sketon.github.io/atom.xml" rel="self"/>
   
   <link href="https://d-sketon.github.io/"/>
-  <updated>2025-10-31T13:46:06.566Z</updated>
+  <updated>2025-10-31T13:50:56.405Z</updated>
   <id>https://d-sketon.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://d-sketon.github.io/20250927/hexo-benchmark-2025/"/>
     <id>https://d-sketon.github.io/20250927/hexo-benchmark-2025/</id>
     <published>2025-09-27T05:44:07.000Z</published>
-    <updated>2025-10-31T13:46:06.566Z</updated>
+    <updated>2025-10-31T13:50:56.405Z</updated>
     
     
     <summary type="html">从 3.9.0 到 8.1.0 的冷/热生成速度对比，并与 Hugo 对比的实测数据与图表</summary>
@@ -42,7 +42,7 @@
     <link href="https://d-sketon.github.io/20250927/hexo-benchmark-2025/"/>
     <id>https://d-sketon.github.io/20250927/hexo-benchmark-2025/</id>
     <published>2025-09-27T05:44:07.000Z</published>
-    <updated>2025-10-31T13:38:30.002Z</updated>
+    <updated>2025-10-31T13:59:08.673Z</updated>
     
     
     <summary type="html">A comparison of cold/hot generation speeds from 3.9.0 to 8.1.0, with measured data and charts comparing it to Hugo.</summary>
@@ -270,7 +270,7 @@
     <link href="https://d-sketon.github.io/20241110/hexo-to-hugo-guide/"/>
     <id>https://d-sketon.github.io/20241110/hexo-to-hugo-guide/</id>
     <published>2024-11-10T15:15:08.000Z</published>
-    <updated>2025-07-06T06:25:27.359Z</updated>
+    <updated>2025-10-31T13:52:13.381Z</updated>
     
     
     <summary type="html">&lt;p&gt;本文记录了 hugo-theme-reimu 主题和 hexo-theme-reimu 主题的区别，以及如何将 hexo-theme-reimu 主题的文章迁移到 hugo-theme-reimu 主题。&lt;/p&gt;</summary>
@@ -293,7 +293,7 @@
     <link href="https://d-sketon.github.io/20241110/hexo-to-hugo-guide/"/>
     <id>https://d-sketon.github.io/20241110/hexo-to-hugo-guide/</id>
     <published>2024-11-10T15:15:08.000Z</published>
-    <updated>2025-09-21T12:13:47.732Z</updated>
+    <updated>2025-10-31T13:59:32.217Z</updated>
     
     
     <summary type="html">&lt;p&gt;This article documents the differences between hugo-theme-reimu and hexo-theme-reimu themes, and how to migrate articles from hexo-theme-reimu to hugo-theme-reimu.&lt;/p&gt;</summary>
@@ -316,7 +316,7 @@
     <link href="https://d-sketon.github.io/20241019/hexo-performance-optimization-guide/"/>
     <id>https://d-sketon.github.io/20241019/hexo-performance-optimization-guide/</id>
     <published>2024-10-19T10:04:49.000Z</published>
-    <updated>2024-10-19T13:00:41.853Z</updated>
+    <updated>2025-11-01T04:54:52.879Z</updated>
     
     
     <summary type="html">本文以hexo-theme-reimu为例，介绍了博客性能优化的方法。</summary>
@@ -337,7 +337,7 @@
     <link href="https://d-sketon.github.io/20241006/hexo-midijs-demo/"/>
     <id>https://d-sketon.github.io/20241006/hexo-midijs-demo/</id>
     <published>2024-10-06T11:02:26.000Z</published>
-    <updated>2024-12-21T06:59:56.821Z</updated>
+    <updated>2025-10-31T13:51:17.635Z</updated>
     
     
     <summary type="html">hexo-midijs插件Demo</summary>
@@ -356,7 +356,7 @@
     <link href="https://d-sketon.github.io/20241006/hexo-echarts-demo/"/>
     <id>https://d-sketon.github.io/20241006/hexo-echarts-demo/</id>
     <published>2024-10-06T08:57:18.000Z</published>
-    <updated>2025-02-09T05:07:37.051Z</updated>
+    <updated>2025-10-31T13:51:45.510Z</updated>
     
     
     <summary type="html">exo-tag-echarts-new插件Demo</summary>
