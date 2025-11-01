@@ -6,7 +6,7 @@
   <link href="https://d-sketon.github.io/atom.xml" rel="self"/>
   
   <link href="https://d-sketon.github.io/"/>
-  <updated>2025-10-31T13:50:56.405Z</updated>
+  <updated>2025-11-01T07:24:04.019Z</updated>
   <id>https://d-sketon.github.io/</id>
   
   <author>
@@ -15,6 +15,44 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2025年 JavaScript Promise 性能对比</title>
+    <link href="https://d-sketon.github.io/20251101/2025-promise-performance-benchmark/"/>
+    <id>https://d-sketon.github.io/20251101/2025-promise-performance-benchmark/</id>
+    <published>2025-11-01T05:42:43.000Z</published>
+    <updated>2025-11-01T07:24:04.019Z</updated>
+    
+    
+    <summary type="html">本文对 2025 年 JavaScript Promise 的性能进行对比，看看这几年 Node 原生 Promise 的性能有没有提升？后起之秀 Bun 的 Promise 实现又有怎样的表现？</summary>
+    
+    
+    
+    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="JavaScript" scheme="https://d-sketon.github.io/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2025 JavaScript Promise Performance Comparison</title>
+    <link href="https://d-sketon.github.io/20251101/2025-promise-performance-benchmark/"/>
+    <id>https://d-sketon.github.io/20251101/2025-promise-performance-benchmark/</id>
+    <published>2025-11-01T05:42:43.000Z</published>
+    <updated>2025-11-01T09:25:01.790Z</updated>
+    
+    
+    <summary type="html">This article compares the performance of JavaScript Promise in 2025, examining whether Node&#39;s native Promise performance has improved over the years and how the emerging Bun&#39;s Promise implementation performs.</summary>
+    
+    
+    
+    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="JavaScript" scheme="https://d-sketon.github.io/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>2025年 Hexo 速度真的很慢吗？—— 各版本生成速度对比</title>
@@ -153,6 +191,25 @@
     
     
     <summary type="html">本文对 2024 年 JavaScript Promise 的性能进行对比，看看这几年 Node 原生 Promise 的性能有没有提升？后起之秀 Bun 的 Promise 实现又有怎样的表现？</summary>
+    
+    
+    
+    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
+    
+    
+    <category term="JavaScript" scheme="https://d-sketon.github.io/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2024 JavaScript Promise Performance Comparison</title>
+    <link href="https://d-sketon.github.io/20241221/2024-promise-performance-benchmark/"/>
+    <id>https://d-sketon.github.io/20241221/2024-promise-performance-benchmark/</id>
+    <published>2024-12-21T06:57:17.000Z</published>
+    <updated>2025-11-01T09:25:03.908Z</updated>
+    
+    
+    <summary type="html">This article compares the performance of JavaScript Promise in 2024, examining whether Node&#39;s native Promise performance has improved over the years and how the emerging Bun&#39;s Promise implementation performs.</summary>
     
     
     
@@ -345,68 +402,6 @@
     
     
     <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
-    
-    
-    <category term="Hexo" scheme="https://d-sketon.github.io/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo-tag-echarts-new插件Demo</title>
-    <link href="https://d-sketon.github.io/20241006/hexo-echarts-demo/"/>
-    <id>https://d-sketon.github.io/20241006/hexo-echarts-demo/</id>
-    <published>2024-10-06T08:57:18.000Z</published>
-    <updated>2025-10-31T13:51:45.510Z</updated>
-    
-    
-    <summary type="html">exo-tag-echarts-new插件Demo</summary>
-    
-    
-    
-    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
-    
-    
-    <category term="Hexo" scheme="https://d-sketon.github.io/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo-theme-reimu开发日志</title>
-    <link href="https://d-sketon.github.io/20240601/hexo-theme-reimu-log/"/>
-    <id>https://d-sketon.github.io/20240601/hexo-theme-reimu-log/</id>
-    <published>2024-06-01T11:58:38.000Z</published>
-    <updated>2025-10-26T08:24:22.614Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;hexo-theme-reimu 的开发日志，记录了每一次更新的内容&lt;/p&gt;
-&lt;p&gt;如果你有任何问题或建议，欢迎提交 &lt;a href=&quot;https://github.com/D-Sketon/hexo-theme-reimu/issues&quot;&gt;Issues&lt;/a&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
-    
-    <category term="hexo" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/hexo/"/>
-    
-    
-    <category term="Hexo" scheme="https://d-sketon.github.io/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>hexo-theme-reimu Development Log</title>
-    <link href="https://d-sketon.github.io/20240601/hexo-theme-reimu-log/"/>
-    <id>https://d-sketon.github.io/20240601/hexo-theme-reimu-log/</id>
-    <published>2024-06-01T11:58:38.000Z</published>
-    <updated>2025-10-31T13:46:31.803Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;If you have any questions or suggestions, feel free to submit an &lt;a href=&quot;https://github.com/D-Sketon/hexo-theme-reimu/issues&quot;&gt;Issue&lt;/a&gt;.&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="计软杂谈" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/"/>
-    
-    <category term="hexo" scheme="https://d-sketon.github.io/categories/%E8%AE%A1%E8%BD%AF%E6%9D%82%E8%B0%88/hexo/"/>
     
     
     <category term="Hexo" scheme="https://d-sketon.github.io/tags/Hexo/"/>
